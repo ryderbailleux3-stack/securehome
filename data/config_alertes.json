@@ -1,0 +1,7 @@
+{
+  "topic": "securehome-huho",
+  "alertes_actives": true,
+  "seuil_notification": 80,
+  "derniere_alerte": "",
+  "adb_device_id": ""
+}

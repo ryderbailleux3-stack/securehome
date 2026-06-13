@@ -1,0 +1,1271 @@
+{
+  "resultsPerPage": 10,
+  "startIndex": 0,
+  "totalResults": 12,
+  "format": "NVD_CVE",
+  "version": "2.0",
+  "timestamp": "2026-06-13T15:05:25.751",
+  "vulnerabilities": [
+    {
+      "cve": {
+        "id": "CVE-2016-10042",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2017-06-29T00:29:00.200",
+        "lastModified": "2026-05-13T00:24:29.033",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Authorization Bypass in the Web interface of Arcadyan SLT-00 Star* (aka Swisscom Internet-Box) devices before R7.7 allows unauthorized reconfiguration of the static routing table via an unauthenticated HTTP request, leading to denial of service and information disclosure."
+          },
+          {
+            "lang": "es",
+            "value": "Permiso de autorización en la interfaz web de Arcadyan SLT-00 Star* (también conocido como Swisscom Internet-Box) versiones anteriores a R7.7 permite la reconfiguración no autorizada de la tabla de enrutamiento estático a través de una solicitud HTTP no autenticada, dando lugar a una denegación de servicio y la divulgación de información."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+                "baseScore": 5.0,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "NONE"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9,
+              "acInsufInfo": true,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-284"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:arcadyan:swisscom_internet-box_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F7326465-5017-49D8-875C-B9829DC962F0"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:arcadyan:swisscom_internet-box:-:*:*:*:light:*:*:*",
+                    "matchCriteriaId": "4AD4A5E1-E1B3-4B30-B67C-58BB86F1BC94"
+                  },
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:arcadyan:swisscom_internet-box:-:*:*:*:plus:*:*:*",
+                    "matchCriteriaId": "1BE84764-6B9B-43B2-BE45-A99D744EB312"
+                  },
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:arcadyan:swisscom_internet-box:-:*:*:*:standard:*:*:*",
+                    "matchCriteriaId": "124FA80D-7C11-45BE-8275-5D7C10FF04A3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.swisscom.ch/content/dam/swisscom/de/about/nachhaltigkeit/digitale-schweiz/sicherheit/bug-bounty/files/cve-2016-10042.txt",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.swisscom.ch/content/dam/swisscom/de/about/nachhaltigkeit/digitale-schweiz/sicherheit/bug-bounty/files/cve-2016-10042.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2018-20377",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2018-12-23T18:29:00.527",
+        "lastModified": "2024-11-21T04:01:21.403",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Orange Livebox 00.96.320S devices allow remote attackers to discover Wi-Fi credentials via /get_getnetworkconf.cgi on port 8080, leading to full control if the admin password equals the Wi-Fi password or has the default admin value. This is related to Firmware 01.11.2017-11:43:44, Boot v0.70.03, Modem 5.4.1.10.1.1A, Hardware 02, and Arcadyan ARV7519RW22-A-L T VR9 1.2."
+          },
+          {
+            "lang": "es",
+            "value": "Los dispositivos Orange Livebox 00.96.320S permiten que atacantes remotos descubran las credenciales wifi mediante /get_getnetworkconf.cgi en el puerto 8080, lo que conduce al control total si la contraseña del administrador es igual a la contraseña de la wifi o tiene el valor \"admin\" por defecto. Esto está relacionado con Firmware 01.11.2017-11:43:44, Boot v0.70.03, Modem 5.4.1.10.1.1A, Hardware 02 y Arcadyan ARV7519RW22-A-L T VR9 1.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "COMPLETE",
+                "integrityImpact": "COMPLETE",
+                "availabilityImpact": "COMPLETE"
+              },
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-noinfo"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:orange:arv7519rw22_livebox_2.1_firmware:00.96.00.96.609es:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "678CBA5D-4FA3-4F68-B2A7-5D1160CC4C01"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:orange:arv7519rw22_livebox_2.1_firmware:00.96.00.96.613:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D83BD3E3-7D78-4EC2-88E8-A2A8BA44D0E6"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:orange:arv7519rw22_livebox_2.1_firmware:00.96.217:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "45BFCADC-70E3-49A0-88D5-9BD8D258BBFC"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:orange:arv7519rw22_livebox_2.1_firmware:00.96.321s:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D176857E-2BCB-43C9-8CA6-3EC09F243900"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:orange:arv7519rw22_livebox_2.1:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "424D2527-B269-4830-9DC5-F2F8AE96BE2D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://badpackets.net/over-19000-orange-livebox-adsl-modems-are-leaking-their-wifi-credentials/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/zadewg/LIVEBOX-0DAY",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://news.ycombinator.com/item?id=18745533",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://web.archive.org/web/20181223120225/https://badpackets.net/over-19000-orange-livebox-adsl-modems-are-leaking-their-wifi-credentials/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://badpackets.net/over-19000-orange-livebox-adsl-modems-are-leaking-their-wifi-credentials/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/zadewg/LIVEBOX-0DAY",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://news.ycombinator.com/item?id=18745533",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://web.archive.org/web/20181223120225/https://badpackets.net/over-19000-orange-livebox-adsl-modems-are-leaking-their-wifi-credentials/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2018-20575",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2018-12-28T17:29:00.823",
+        "lastModified": "2024-11-21T04:01:45.957",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Orange Livebox 00.96.320S devices have an undocumented /system_firmwarel.stm URI for manual firmware update. This is related to Firmware 01.11.2017-11:43:44, Boot v0.70.03, Modem 5.4.1.10.1.1A, Hardware 02, and Arcadyan ARV7519RW22-A-L T VR9 1.2."
+          },
+          {
+            "lang": "es",
+            "value": "Los dispositivos Orange Livebox 00.96.320S tienen un URI /system_firmwarel.stm no documentado para actualizar el firmware manualmente. Esto está relacionado con Firmware 01.11.2017-11:43:44, Boot v0.70.03, Modem 5.4.1.10.1.1A, Hardware 02, y Arcadyan ARV7519RW22-A-L T VR9 1.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+                "baseScore": 5.0,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "NONE"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:orange:arv7519rw22_livebox_2.1_firmware:00.96.320s:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B896BB0E-007A-4E86-A3E4-6D199E0A52A9"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:orange:arv7519rw22_livebox_2.1:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "424D2527-B269-4830-9DC5-F2F8AE96BE2D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/zadewg/LIVEBOX-0DAY",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/zadewg/LIVEBOX-0DAY",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2018-20576",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2018-12-28T17:29:00.857",
+        "lastModified": "2024-11-21T04:01:46.107",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Orange Livebox 00.96.320S devices allow cgi-bin/autodialing.exe and cgi-bin/phone_test.exe CSRF, leading to arbitrary outbound telephone calls to an attacker-specified telephone number. This is related to Firmware 01.11.2017-11:43:44, Boot v0.70.03, Modem 5.4.1.10.1.1A, Hardware 02, and Arcadyan ARV7519RW22-A-L T VR9 1.2."
+          },
+          {
+            "lang": "es",
+            "value": "Los dispositivos Orange Livebox 00.96.320S permiten Cross-Site Request Forgery (CSRF) en cgi-bin/autodialing.exe y cgi-bin/phone_test.exe, lo que conduce a llamadas de teléfono salientes a un número de teléfono especificado por el atacante. Esto está relacionado con Firmware 01.11.2017-11:43:44, Boot v0.70.03, Modem 5.4.1.10.1.1A, Hardware 02, y Arcadyan ARV7519RW22-A-L T VR9 1.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+                "baseScore": 5.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.5
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+                "baseScore": 5.8,
+                "accessVector": "NETWORK",
+                "accessComplexity": "MEDIUM",
+                "authentication": "NONE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "NONE"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 4.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": true
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-352"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:orange:arv7519rw22_livebox_2.1_firmware:00.96.320s:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B896BB0E-007A-4E86-A3E4-6D199E0A52A9"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:orange:arv7519rw22_livebox_2.1:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "424D2527-B269-4830-9DC5-F2F8AE96BE2D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gbhackers.com/orange-adsl-modems/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/zadewg/LIVEBOX-0DAY",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://gbhackers.com/orange-adsl-modems/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/zadewg/LIVEBOX-0DAY",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2018-20577",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2018-12-28T17:29:00.917",
+        "lastModified": "2024-11-21T04:01:46.270",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Orange Livebox 00.96.320S devices allow cgi-bin/restore.exe, cgi-bin/firewall_SPI.exe, cgi-bin/setup_remote_mgmt.exe, cgi-bin/setup_pass.exe, and cgi-bin/upgradep.exe CSRF. This is related to Firmware 01.11.2017-11:43:44, Boot v0.70.03, Modem 5.4.1.10.1.1A, Hardware 02, and Arcadyan ARV7519RW22-A-L T VR9 1.2."
+          },
+          {
+            "lang": "es",
+            "value": "Los dispositivos Orange Livebox 00.96.320S permiten Cross-Site Request Forgery (CSRF) en cgi-bin/restore.exe, cgi-bin/firewall_SPI.exe, cgi-bin/setup_remote_mgmt.exe, cgi-bin/setup_pass.exe y cgi-bin/upgradep.exe. Esto está relacionado con Firmware 01.11.2017-11:43:44, Boot v0.70.03, Modem 5.4.1.10.1.1A, Hardware 02, y Arcadyan ARV7519RW22-A-L T VR9 1.2."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+                "baseScore": 9.1,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.2
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:N/I:C/A:C",
+                "baseScore": 9.4,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "COMPLETE",
+                "availabilityImpact": "COMPLETE"
+              },
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 9.2,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-352"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:orange:arv7519rw22_livebox_2.1_firmware:00.96.320s:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "B896BB0E-007A-4E86-A3E4-6D199E0A52A9"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:orange:arv7519rw22_livebox_2.1:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "424D2527-B269-4830-9DC5-F2F8AE96BE2D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/zadewg/LIVEBOX-0DAY",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/zadewg/LIVEBOX-0DAY",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2021-38703",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2021-09-01T12:15:07.667",
+        "lastModified": "2024-11-21T06:17:56.443",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Wireless devices running certain Arcadyan-derived firmware (such as KPN Experia WiFi 1.00.15) do not properly sanitise user input to the syslog configuration form. An authenticated remote attacker could leverage this to alter the device configuration and achieve remote code execution. This can be exploited in conjunction with CVE-2021-20090."
+          },
+          {
+            "lang": "es",
+            "value": "Unos dispositivos inalámbricos que ejecutan determinados firmware derivados de Arcadyan (como KPN Experia WiFi versión 1.00.15) no sanean correctamente la entrada del usuario en el formulario de configuración del syslog. Un atacante remoto autenticado podría aprovechar esto para alterar la configuración del dispositivo y lograr una ejecución de código remota. Esto puede ser explotado en conjunto con CVE-2021-20090"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+                "baseScore": 9.0,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "SINGLE",
+                "confidentialityImpact": "COMPLETE",
+                "integrityImpact": "COMPLETE",
+                "availabilityImpact": "COMPLETE"
+              },
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.0,
+              "impactScore": 10.0,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "NVD-CWE-Other"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:kpn:experia_wifi_firmware:1.00.15:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "637466A4-287A-41F1-A3F5-B53E5C6E5098"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:kpn:experia_wifi:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6A6A6DAB-4CFF-4F19-A732-2BD07D376688"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://7bits.nl/journal/posts/cve-2021-38703-kpn-experia-wifi-root-shell/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.kpnwebshop.com/modems-routers/producten/experia-wifi/2",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://7bits.nl/journal/posts/cve-2021-38703-kpn-experia-wifi-root-shell/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.kpnwebshop.com/modems-routers/producten/experia-wifi/2",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2020-9419",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2022-12-14T01:15:10.210",
+        "lastModified": "2025-04-22T03:15:17.490",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Multiple stored cross-site scripting (XSS) vulnerabilities in Arcadyan Wifi routers VRV9506JAC23 allow remote attackers to inject arbitrary web script or HTML via the hostName and domain_name parameters present in the LAN configuration section of the administrative dashboard."
+          },
+          {
+            "lang": "es",
+            "value": "Múltiples vulnerabilidades de Cross-Site Scripting (XSS) almacenado en los enrutadores Arcadyan Wifi VRV9506JAC23 permiten a atacantes remotos inyectar scripts web o HTML arbitrario a través de los parámetros hostName y domain_name presentes en la sección de configuración de LAN del panel administrativo."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 5.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.3,
+              "impactScore": 2.7
+            },
+            {
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 5.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.3,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          },
+          {
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:arcadyan:vrv9506jac23_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "10232C4C-22AA-4364-BFFB-A239208DBD60"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:arcadyan:vrv9506jac23:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F08F2A89-1668-420F-BA65-2D241D986A14"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/AsherDLL/03d0762b5a535e300f1121caebe333ce",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://gist.github.com/AsherDLL/03d0762b5a535e300f1121caebe333ce",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2020-9420",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2022-12-14T01:15:10.273",
+        "lastModified": "2025-04-22T03:15:17.693",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The login password of the web administrative dashboard in Arcadyan Wifi routers VRV9506JAC23 is sent in cleartext, allowing an attacker to sniff and intercept traffic to learn the administrative credentials to the router."
+          },
+          {
+            "lang": "es",
+            "value": "La contraseña de inicio de sesión del panel administrativo web en los enrutadores Arcadyan Wifi VRV9506JAC23 se envía en texto plano, lo que permite a un atacante rastrear e interceptar el tráfico para conocer las credenciales administrativas del enrutador."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.6
+            },
+            {
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.6
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-319"
+              }
+            ]
+          },
+          {
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-319"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:arcadyan:vrv9506jac23_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "10232C4C-22AA-4364-BFFB-A239208DBD60"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:arcadyan:vrv9506jac23:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F08F2A89-1668-420F-BA65-2D241D986A14"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://gist.github.com/AsherDLL/03d0762b5a535e300f1121caebe333ce",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://gist.github.com/AsherDLL/03d0762b5a535e300f1121caebe333ce",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2024-41992",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2024-11-11T01:15:04.813",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Wi-Fi Alliance wfa_dut (in Wi-Fi Test Suite) through 9.0.0 allows OS command injection via 802.11x frames because the system() library function is used. For example, on Arcadyan FMIMG51AX000J devices, this leads to wfaTGSendPing remote code execution as root via traffic to TCP port 8000 or 8080 on a LAN interface. On other devices, this may be exploitable over a WAN interface."
+          },
+          {
+            "lang": "es",
+            "value": "La versión wfa_dut de Wi-Fi Alliance (en Wi-Fi Test Suite) hasta la versión 9.0.0 permite la inyección de comandos del sistema operativo a través de tramas 802.11x porque se utiliza la función de librería system(). Por ejemplo, en los dispositivos Arcadyan FMIMG51AX000J, esto lleva a la ejecución remota del código wfaTGSendPing como root a través del tráfico al puerto TCP 8000 o 8080 en una interfaz LAN. En otros dispositivos, esto puede ser explotable a través de una interfaz WAN."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH",
+                "attackVector": "ADJACENT_NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://ssd-disclosure.com/ssd-advisory-arcadyan-fmimg51ax000j-wifi-alliance-rce/",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://www.kb.cert.org/vuls/id/123336",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2024-53561",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-01-14T17:15:17.667",
+        "lastModified": "2026-04-15T00:35:42.020",
+        "vulnStatus": "Deferred",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A remote code execution (RCE) vulnerability in Arcadyan Meteor 2 CPE FG360 Firmware ETV2.10 allows attackers to execute arbitrary code via a crafted request."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de ejecución remota de código (RCE) en Arcadyan Meteor 2 CPE FG360 Firmware ETV2.10 permite a los atacantes ejecutar código arbitrario a través de una solicitud manipulada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:N",
+                "baseScore": 8.7,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "HIGH",
+                "userInteraction": "NONE",
+                "scope": "CHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.3,
+              "impactScore": 5.8
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-94"
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/Mrnmap/mrnmap-cve/blob/main/CVE-2024-53561",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://www.arcadyan.com/en-us/solutions/idea/fiveG/",
+            "source": "cve@mitre.org"
+          }
+        ]
+      }
+    }
+  ]
+}

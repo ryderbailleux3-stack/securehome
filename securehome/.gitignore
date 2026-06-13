@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Environnement virtuel
+venv/
+env/
+
+# Données de scan (contiennent des infos réseau privées)
+data/*.json
+data/cache_cve/
+
+# Rapports PDF générés
+data/*.pdf
+
+# Configuration locale (contient le topic ntfy)
+data/config_alertes.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

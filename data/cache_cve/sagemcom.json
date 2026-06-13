@@ -1,0 +1,1491 @@
+{
+  "resultsPerPage": 9,
+  "startIndex": 0,
+  "totalResults": 9,
+  "format": "NVD_CVE",
+  "version": "2.0",
+  "timestamp": "2026-06-13T15:06:01.058",
+  "vulnerabilities": [
+    {
+      "cve": {
+        "id": "CVE-2017-6552",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2017-03-09T09:59:00.287",
+        "lastModified": "2026-05-13T00:24:29.033",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Livebox 3 Sagemcom SG30_sip-fr-5.15.8.1 devices have an insufficiently large default value for the maximum IPv6 routing table size: it can be filled within minutes. An attacker can exploit this issue to render the affected system unresponsive, resulting in a denial-of-service condition for telephone, Internet, and TV services."
+          },
+          {
+            "lang": "es",
+            "value": "Dispositivos Livebox 3 Sagemcom SG30_sip-fr-5.15.8.1 tienen un valor predeterminado insuficientemente grande para el tamaño máximo de la tabla de enrutamiento IPV6: puede ser llenado en minutos. Un atacante puede explotar este problema para hacer que el sistema afectado no responda, resultando en una condición de denegación de servicio para los servicios de teléfono, Internet y TV."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+                "baseScore": 7.8,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "COMPLETE"
+              },
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.9,
+              "acInsufInfo": true,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-400"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sagemcom:livebox_firmware:5.15.8.1:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "449D1F92-0C67-48BA-AE29-48F0B4D0CD72"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:sagemcom:livebox:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "03E8578B-AEF6-492C-88FB-00D68C776B5E"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.securityfocus.com/bid/96827",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/41565/",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=ShCs5_8mBlM&t=37s",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/96827",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/41565/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          },
+          {
+            "url": "https://www.youtube.com/watch?v=ShCs5_8mBlM&t=37s",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2019-9555",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2019-03-05T23:29:02.910",
+        "lastModified": "2024-11-21T04:51:51.073",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Sagemcom F@st 5260 routers using firmware version 0.4.39, in WPA mode, default to using a PSK that is generated from a 2-part wordlist of known values and a nonce with insufficient entropy. The number of possible PSKs is about 1.78 billion, which is too small."
+          },
+          {
+            "lang": "es",
+            "value": "Los routers Sagemcom F@st 5260 que emplean firmware en versiones 0.4.39, en modo WPA, emplean por defecto un PSK que se genera a partir de una lista de palabras en dos partes de valores conocidos y un nonce con una entropía insuficiente. El número de posibles PSK es de 1.78 mil millones, lo que resulta demasiado pequeño."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 1.4
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                "baseScore": 5.0,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-331"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sagemcom:f\\@st_5260_firmware:0.4.39:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FDD531F7-8AD8-4F0C-8372-5E14848174B6"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:sagemcom:f\\@st_5260:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8E03823A-3C9B-45AF-BE9B-BE018E91A94F"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://seclists.org/fulldisclosure/2019/Mar/12",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Mailing List",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://seclists.org/fulldisclosure/2019/Mar/12",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Mitigation",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2019-19494",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-01-09T13:15:10.993",
+        "lastModified": "2024-11-21T04:34:50.037",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Broadcom based cable modems across multiple vendors are vulnerable to a buffer overflow, which allows a remote attacker to execute arbitrary code at the kernel level via JavaScript run in a victim's browser. Examples of affected products include Sagemcom F@st 3890 prior to 50.10.21_T4, Sagemcom F@st 3890 prior to 05.76.6.3f, Sagemcom F@st 3686 3.428.0, Sagemcom F@st 3686 4.83.0, NETGEAR CG3700EMR 2.01.05, NETGEAR CG3700EMR 2.01.03, NETGEAR C6250EMR 2.01.05, NETGEAR C6250EMR 2.01.03, Technicolor TC7230 STEB 01.25, COMPAL 7284E 5.510.5.11, and COMPAL 7486E 5.510.5.11."
+          },
+          {
+            "lang": "es",
+            "value": "Los módems de cable basados en Broadcom mediante múltiples proveedores son vulnerables a un desbordamiento de búfer, lo que permite a un atacante remoto ejecutar código arbitrario a nivel del kernel por medio de JavaScript ejecutado en el navegador de la víctima. Ejemplos de productos afectados incluyen Sagemcom F@st 3890 versiones anteriores a 50.10.21_T4, Sagemcom F@st 3890 versiones anteriores a 05.76.6.3f, Sagemcom F@st versión 3686 3.428.0, Sagemcom F@st versión 3686 4.83.0, NETGEAR CG3700EMR versión 2.01.05, NETGEAR CG3700EMR versión 2.01.03, NETGEAR C6250EMR versión 2.01.05, NETGEAR C6250EMR versión 2.01.03, Technicolor TC7230 STEB versión 01.25, COMPAL 7284E versión 5.510.5.11, and COMPAL 7486E versión 5.510.5.11."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                "baseScore": 9.3,
+                "accessVector": "NETWORK",
+                "accessComplexity": "MEDIUM",
+                "authentication": "NONE",
+                "confidentialityImpact": "COMPLETE",
+                "integrityImpact": "COMPLETE",
+                "availabilityImpact": "COMPLETE"
+              },
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.6,
+              "impactScore": 10.0,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": true
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-120"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sagemcom:f\\@st_3890_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "50.10.21_t4",
+                    "matchCriteriaId": "8A7AB5C0-0032-4E94-8342-619A862DF1E9"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:sagemcom:f\\@st_3890:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9B00CCDB-BE96-4A31-A69F-B9EA68F0A906"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sagemcom:f\\@st_3890_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "05.76.6.3f",
+                    "matchCriteriaId": "2AB87EC4-B19E-4627-82BE-41AE08B23D0B"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:sagemcom:f\\@st_3890:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9B00CCDB-BE96-4A31-A69F-B9EA68F0A906"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sagemcom:f\\@st_3686_firmware:3.428.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "49952BF0-03EA-43DC-AB32-B45C72328F52"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sagemcom:f\\@st_3686_firmware:4.83.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "E62AC3BC-8A2E-419D-9D3D-E2B00D0BB4A6"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:sagemcom:f\\@st_3686:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3466ACB1-D6DA-4CB7-A176-F16A47000AC1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:netgear:cg3700emr_firmware:2.01.03:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A0936804-9338-4510-8AD9-264ED8C487CA"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:netgear:cg3700emr_firmware:2.01.05:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FE2D88A3-C2DD-4A8B-9C3D-DBFC779D20EA"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:netgear:cg3700emr:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EBD36E99-0FC3-4F4D-B9E2-D4275CFC646E"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:netgear:c6250emr_firmware:2.01.03:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1ADE11A3-FAEA-40B3-B0D3-22F0C1012DA2"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:netgear:c6250emr_firmware:2.01.05:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "6F9A3B13-E948-423C-8F24-4A96221ABF83"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:netgear:c6250emr:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "49BD2955-A719-4E9C-9120-733305B79B2A"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:technicolor:tc7230_steb_firmware:01.25:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "635672C3-C386-43D5-9072-5EB90FCB32DD"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:technicolor:tc7230_steb:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F72BEB75-FE57-49AE-AD6B-61475FAE1D90"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:compal:7284e_firmware:5.510.5.11:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C3BD2A00-3358-43BE-BB8C-8E71DA6EE79E"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:compal:7284e:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CDB29C72-EFDF-4682-A3D1-F618260F784D"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:compal:7486e_firmware:5.510.5.11:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2ED9CAC1-4018-4AB9-A66B-2498E2ADC11F"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:compal:7486e:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "11FF39D5-5827-4FE8-B546-C8863D535123"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://cablehaunt.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Technical Description",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/Lyrebirds/Cable-Haunt-Report/releases/download/2.4/report.pdf",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Technical Description",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/Lyrebirds/Fast8690-exploit",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.broadcom.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://cablehaunt.com",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Technical Description",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/Lyrebirds/Cable-Haunt-Report/releases/download/2.4/report.pdf",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Technical Description",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/Lyrebirds/Fast8690-exploit",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.broadcom.com",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2020-24034",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-09-01T18:15:13.587",
+        "lastModified": "2024-11-21T05:14:20.723",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Sagemcom F@ST 5280 routers using firmware version 1.150.61 have insecure deserialization that allows any authenticated user to perform a privilege escalation to any other user. By making a request with valid sess_id, nonce, and ha1 values inside of the serialized session cookie, an attacker may alter the user value inside of this cookie, and assume the role and permissions of the user specified. By assuming the role of the user internal, which is inaccessible to end users by default, the attacker gains the permissions of the internal account, which includes the ability to flash custom firmware to the router, allowing the attacker to achieve a complete compromise."
+          },
+          {
+            "lang": "es",
+            "value": "Los enrutadores Sagemcom F@ST 5280 que utilizan la versión de firmware 1.150.61, presentan una deserialización no segura que permite a cualquier usuario autenticado llevar a cabo una escalada de privilegios a cualquier otro usuario.&#xa0;Al hacer una petición con valores válidos sess_id, nonce y ha1 dentro de la cookie de sesión serializada, un atacante puede alterar el valor de usuario dentro de esta cookie y asumir el rol y los permisos del usuario especificado.&#xa0;Al asumir el rol de usuario interno, que es inaccesible para los usuarios finales por defecto, el atacante consigue los permisos de la cuenta interna, que incluye la capacidad de actualizar firmware personalizado en el enrutador, permitiendo al atacante lograr un compromiso completo"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+                "baseScore": 9.0,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "SINGLE",
+                "confidentialityImpact": "COMPLETE",
+                "integrityImpact": "COMPLETE",
+                "availabilityImpact": "COMPLETE"
+              },
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.0,
+              "impactScore": 10.0,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-502"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sagemcom:f\\@st_5280_router_firmware:1.150.61:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2C56292D-8A79-4029-B8AE-E92DA3B4529E"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:sagemcom:f\\@st_5280_router:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D6461A37-E57A-4D05-8C7E-ED25A7C9566D"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://packetstormsecurity.com/files/159026/Sagemcom-F-ST-5280-Privilege-Escalation.html",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2020/Sep/3",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://seclists.org/fulldisclosure/2020/Sep/3",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://support.sagemcom.com/fr/haut-debit",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/159026/Sagemcom-F-ST-5280-Privilege-Escalation.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2020/Sep/3",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://seclists.org/fulldisclosure/2020/Sep/3",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://support.sagemcom.com/fr/haut-debit",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2020-21733",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-09-14T12:15:10.943",
+        "lastModified": "2024-11-21T05:12:50.377",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Sagemcom F@ST3686 v1.0 HUN 3.97.0 has XSS via RgDiagnostics.asp, RgDdns.asp, RgFirewallEL.asp, RgVpnL2tpPptp.asp."
+          },
+          {
+            "lang": "es",
+            "value": "Sagemcom F@ST3686 versión v1.0 HUN 3.97.0, presenta una vulnerabilidad de tipo XSS por medio de los archivos RgDiagnostics.asp, RgDdns.asp, RgFirewallEL.asp, RgVpnL2tpPptp.asp"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 6.1,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.7
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "baseScore": 4.3,
+                "accessVector": "NETWORK",
+                "accessComplexity": "MEDIUM",
+                "authentication": "NONE",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "NONE"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": true
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sagemcom:f\\@st_3686_firmware:1.0_hun_3.97.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F1572CDF-6427-490B-ABCC-427002894FC5"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:sagemcom:f\\@st_3686:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3466ACB1-D6DA-4CB7-A176-F16A47000AC1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://sagemcom.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://sagemcomfst3686v10hun3970.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://github.com/Gr3gPr1est/BugReport/blob/master/CVE-2020-21733",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/Gr3gPr1est/BugReport/blob/master/SAGEM_F%40ST3686_v1.0_HUN_3.97.0_XSS_Vuln..pdf",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://sagemcom.com",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "http://sagemcomfst3686v10hun3970.com",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://github.com/Gr3gPr1est/BugReport/blob/master/CVE-2020-21733",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/Gr3gPr1est/BugReport/blob/master/SAGEM_F%40ST3686_v1.0_HUN_3.97.0_XSS_Vuln..pdf",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2020-29138",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-11-27T16:15:11.507",
+        "lastModified": "2024-11-21T05:23:40.953",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Incorrect Access Control in the configuration backup path in SAGEMCOM F@ST3486 NET DOCSIS 3.0, software NET_4.109.0, allows remote unauthenticated users to download the router configuration file via the /backupsettings.conf URI, when any valid session is running."
+          },
+          {
+            "lang": "es",
+            "value": "Un Control de Acceso Incorrecto en la ruta de respaldo de la configuración en SAGEMCOM F@ST3486 NET DOCSIS versión 3.0, software NET_4.109.0, permite a unos usuarios no autenticados remotos descargar el archivo de configuración del enrutador por medio del URI /backupsettings.conf, cuando se está ejecutando una sesión válida"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+                "baseScore": 5.3,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 1.4
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                "baseScore": 5.0,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-306"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sagemcom:f\\@st_3486_router_firmware:4.109.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "DE1D3DD1-E67D-4BD3-AB09-7E653BC9A9AC"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:sagemcom:f\\@st_3486_router:3.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "BF0203B0-2902-41B3-A9CC-58879806393F"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://medium.com/%40alexandrevvo/improper-access-control-in-the-sagemcom-router-model-f-st3486-net-797968e8adc8",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://medium.com/%40alexandrevvo/improper-access-control-in-the-sagemcom-router-model-f-st3486-net-797968e8adc8",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2021-3304",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2021-01-26T18:16:29.880",
+        "lastModified": "2024-11-21T06:21:14.647",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Sagemcom F@ST 3686 v2 3.495 devices have a buffer overflow via a long sessionKey to the goform/login URI."
+          },
+          {
+            "lang": "es",
+            "value": "Los dispositivos Sagemcom F@ST 3686 versión v2 3.495, presentan un desbordamiento del búfer por medio de una clave de sesión larga para el URI goform/login"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+                "baseScore": 7.5,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "PARTIAL"
+              },
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 6.4,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-120"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sagemcom:f\\@st_3686_firmware:3.495:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "577790CF-28A3-4D32-A81B-B265736FE75D"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:sagemcom:f\\@st_3686:v2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "15D79402-E870-47BD-BFA1-8E954CFFC066"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://twitter.com/j0nh4t/status/1349649975479840769",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://twitter.com/j0nh4t/status/1349649975479840769",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2024-1623",
+        "sourceIdentifier": "cve-coordination@incibe.es",
+        "published": "2024-03-14T13:15:53.397",
+        "lastModified": "2025-01-23T18:10:39.310",
+        "vulnStatus": "Analyzed",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Insufficient session timeout vulnerability in the FAST3686 V2 Vodafone router from Sagemcom. This vulnerability could allow a local attacker to access the administration panel without requiring login credentials. This vulnerability is possible because the 'Login.asp and logout.asp' files do not handle session details correctly."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de tiempo de espera de sesión insuficiente en el router Vodafone FAST3686 V2 de Sagemcom. Esta vulnerabilidad podría permitir que un atacante local acceda al panel de administración sin requerir credenciales de inicio de sesión. Esta vulnerabilidad es posible porque los archivos 'Login.asp y logout.asp' no manejan correctamente los detalles de la sesión."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "cve-coordination@incibe.es",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+                "baseScore": 7.7,
+                "baseSeverity": "HIGH",
+                "attackVector": "LOCAL",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.5,
+              "impactScore": 5.2
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 7.8,
+                "baseSeverity": "HIGH",
+                "attackVector": "LOCAL",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 1.8,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "cve-coordination@incibe.es",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-613"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sagemcom:f\\@st_3686_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "3.709.2",
+                    "matchCriteriaId": "AC4013B3-F95B-4BAA-9CEB-F5C35EAF4E8C"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:sagemcom:f\\@st_3686:v2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "15D79402-E870-47BD-BFA1-8E954CFFC066"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://www.incibe.es/en/incibe-cert/notices/aviso/insufficient-session-timeout-vulnerability-sagemcom-router",
+            "source": "cve-coordination@incibe.es",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.incibe.es/en/incibe-cert/notices/aviso/insufficient-session-timeout-vulnerability-sagemcom-router",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-29329",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2026-01-12T22:16:07.660",
+        "lastModified": "2026-01-22T18:46:41.067",
+        "vulnStatus": "Analyzed",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Buffer Overflow in the ippprint (Internet Printing Protocol) service in Sagemcom F@st 3686 MAGYAR_4.121.0 allows remote attacker to execute arbitrary code by sending a crafted HTTP request."
+          },
+          {
+            "lang": "es",
+            "value": "Desbordamiento de búfer en el servicio ippprint (Internet Printing Protocol) en Sagemcom F@st 3686 MAGYAR_4.121.0 permite a un atacante remoto ejecutar código arbitrario mediante el envío de una solicitud HTTP manipulada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-120"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:sagemcom:f\\@st_3686_firmware:4.121.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "94060A56-9AEB-4DB4-9BDD-E7BFAFAA57EB"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:sagemcom:f\\@st_3686:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "3466ACB1-D6DA-4CB7-A176-F16A47000AC1"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://fst.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Not Applicable"
+            ]
+          },
+          {
+            "url": "http://sagemcom.com",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://github.com/SilverS3c/Sagemcom-fast-3686-ippprint",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

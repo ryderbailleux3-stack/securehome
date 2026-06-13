@@ -1,0 +1,1414 @@
+{
+  "resultsPerPage": 10,
+  "startIndex": 0,
+  "totalResults": 109,
+  "format": "NVD_CVE",
+  "version": "2.0",
+  "timestamp": "2026-06-12T16:14:53.644",
+  "vulnerabilities": [
+    {
+      "cve": {
+        "id": "CVE-2011-4697",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2012-01-25T04:03:27.580",
+        "lastModified": "2026-04-29T01:13:23.040",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Xiaomi MiTalk Messenger (com.xiaomi.channel) application before 2.1.320 for Android does not properly protect data, which allows remote attackers to read or modify messaging information via a crafted application."
+          },
+          {
+            "lang": "es",
+            "value": "La aplicación Xiaomi MiTalk Messenger (com.xiaomi.channel) antes de v2.1.320 para Android no protege correctamente los datos, lo que permite a atacantes remotos leer o modificar información de mensajería a través de una aplicación modificada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+                "baseScore": 6.4,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "NONE"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 4.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-200"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xiaomi:mitalk_messenger:*:*:*:*:*:*:*:*",
+                    "versionEndIncluding": "2.1.310",
+                    "matchCriteriaId": "D1B30B02-C895-4646-B305-F9A36E903FF3"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xiaomi:mitalk_messenger:1.0:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C486E019-2920-4C74-ADEF-06B0CA186FE0"
+                  },
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:xiaomi:mitalk_messenger:2.1.280:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "5F601999-4E5A-4F2E-96ED-51A115B63459"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:o:android:android:*:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8549DBC2-7199-41FF-B646-6CED58571E20"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www4.comp.polyu.edu.hk/~appsec/bugs/CVE-2011-4697-vulnerability-in-MiTalk.html",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "http://www4.comp.polyu.edu.hk/~appsec/bugs/CVE-2011-4697-vulnerability-in-MiTalk.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2018-14010",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2018-07-15T03:29:00.227",
+        "lastModified": "2024-11-21T03:48:26.510",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OS command injection in the guest Wi-Fi settings feature in /cgi-bin/luci on Xiaomi R3P before 2.14.5, R3C before 2.12.15, R3 before 2.22.15, and R3D before 2.26.4 devices allows an attacker to execute any command via crafted JSON data."
+          },
+          {
+            "lang": "es",
+            "value": "Inyección de comandos del sistema operativo en la característica de opciones Wi-Fi de invitado en /cgi-bin/luci en Xiaomi R3P en versiones anteriores a la 2.14.5, R3C en versiones anteriores a la 2.12.15, R3 en versiones anteriores a la 2.22.15 y R3D en versiones anteriores a la 2.26.4 permite que un atacante ejecute cualquier comando mediante datos JSON manipulados."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "COMPLETE",
+                "integrityImpact": "COMPLETE",
+                "availabilityImpact": "COMPLETE"
+              },
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:mi:xiaomi_r3p_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "2.14.5",
+                    "matchCriteriaId": "7C0BC0B6-1F23-4C39-8ED4-1A326CC36BCD"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:mi:xiaomi_r3p:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "0E305494-D425-49BD-9812-68637B727DA3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:mi:xiaomi_r3c_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "2.12.15",
+                    "matchCriteriaId": "A86D6469-880F-4359-92BD-7613AE375CB4"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:mi:xiaomi_r3c:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "AD403E81-AB39-4F0D-AEE9-D1F5458E0132"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:mi:xiaomi_r3d_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "2.26.4",
+                    "matchCriteriaId": "9C83A536-A4F5-45F3-A887-070AE57EF7FD"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:mi:xiaomi_r3d:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A75F32E8-B475-41B0-8697-3266D01C1C09"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:mi:xiaomi_r3:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "2.22.15",
+                    "matchCriteriaId": "F80EF710-707D-4820-ADF0-5E181E00B26C"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:mi:xiaomi_r3:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F9F5C981-B4CD-4908-9B29-00E27E3B31ED"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.cnvd.org.cn/flaw/show/CNVD-2018-04521",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/cc-crack/router/blob/master/CNVD-2018-04521.py",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.cnvd.org.cn/flaw/show/CNVD-2018-04521",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/cc-crack/router/blob/master/CNVD-2018-04521.py",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2018-14060",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2018-07-15T03:29:00.290",
+        "lastModified": "2024-11-21T03:48:32.690",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "OS command injection in the AP mode settings feature in /cgi-bin/luci /api/misystem/set_router_wifiap on Xiaomi R3D before 2.26.4 devices allows an attacker to execute any command via crafted JSON data."
+          },
+          {
+            "lang": "es",
+            "value": "Inyección de comandos del sistema operativo en la característica de opciones del modo AP en /cgi-bin/luci /api/misystem/set_router_wifiap en Xiaomi R3D en versiones anteriores a la 2.26.4 permite que un atacante ejecute cualquier comando mediante datos JSON manipulados."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                "baseScore": 10.0,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "COMPLETE",
+                "integrityImpact": "COMPLETE",
+                "availabilityImpact": "COMPLETE"
+              },
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 10.0,
+              "impactScore": 10.0,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:mi:xiaomi_r3d_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "2.26.4",
+                    "matchCriteriaId": "9C83A536-A4F5-45F3-A887-070AE57EF7FD"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:mi:xiaomi_r3d:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A75F32E8-B475-41B0-8697-3266D01C1C09"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://www.cnvd.org.cn/flaw/show/CNVD-2018-04520",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/cc-crack/router/blob/master/CNVD-2018-04520.py",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.cnvd.org.cn/flaw/show/CNVD-2018-04520",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/cc-crack/router/blob/master/CNVD-2018-04520.py",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2018-16307",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2018-09-05T21:29:03.327",
+        "lastModified": "2024-11-21T03:52:29.880",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An \"Out-of-band resource load\" issue was discovered on Xiaomi MIWiFi Xiaomi_55DD Version 2.8.50 devices. It is possible to induce the application to retrieve the contents of an arbitrary external URL and return those contents in its own response. If a domain name (containing a random string) is used in the HTTP Host header, the application performs an HTTP request to the specified domain. The response from that request is then included in the application's own response."
+          },
+          {
+            "lang": "es",
+            "value": "Se ha detectado un problema de carga de recursos fuera de banda en dispositivos Xiaomi MIWiFi Xiaomi_55DD 2.8.50. Es posible hacer que la aplicación recupere el contenido de una URL arbitraria externa y devuelva ese contenido en su propia respuesta. Si un nombre de dominio (que contiene una cadena aleatoria) se emplea en la cabecera HTTP Host, la aplicación realiza una petición HTTP al dominio especificado. La respuesta de esa petición se incluye en la propia respuesta de la aplicación."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                "baseScore": 5.0,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-200"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:mi:xiaomi_miwifi_xiaomi_55dd_firmware:2.8.50:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CE09C2E7-0648-4A8D-8D32-FAE068175F27"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:mi:xiaomi_miwifi_xiaomi_55dd:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1104FB28-FA08-4E91-9A91-A292A5290F92"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://packetstormsecurity.com/files/149196/MIWiFi-Xiaomi_55DD-2.8.50-Out-Of-Band-Resource-Load.html",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/149196/MIWiFi-Xiaomi_55DD-2.8.50-Out-Of-Band-Resource-Load.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2018-13022",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2018-11-27T20:29:00.330",
+        "lastModified": "2024-11-21T03:46:15.697",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Cross-site scripting vulnerability in the API 404 page on Xiaomi Mi Router 3 version 2.22.15 allows attackers to execute arbitrary JavaScript via a modified URL path."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad Cross-Site Scripting (XSS) en la página API 404 en Xiaomi Mi Router 3 en su versión 2.22.15 permite que los atacantes ejecuten JavaScript arbitrario mediante una ruta URL modificada."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 6.1,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 2.7
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "baseScore": 4.3,
+                "accessVector": "NETWORK",
+                "accessComplexity": "MEDIUM",
+                "authentication": "NONE",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "NONE"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": true
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:mi:miwifi_os:2.22.15:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A05589A7-3372-49B2-ADE4-7262DEC97355"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:mi:mi_router_3:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "31C4979E-1E54-4195-B316-64D57C45B8B3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://blog.securityevaluators.com/hack-routers-get-toys-exploiting-the-mi-router-3-1d7fd42f0838",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://blog.securityevaluators.com/hack-routers-get-toys-exploiting-the-mi-router-3-1d7fd42f0838",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2018-13023",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2018-11-27T20:29:00.377",
+        "lastModified": "2024-11-21T03:46:15.847",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "System command injection vulnerability in wifi_access in Xiaomi Mi Router 3 version 2.22.15 allows attackers to execute system commands via the \"timeout\" URL parameter."
+          },
+          {
+            "lang": "es",
+            "value": "Vulnerabilidad de inyección de comandos del sistema en Xiaomi Mi Router 3 en su versión 2.22.15 permite que los atacantes ejecuten comandos del sistema mediante el parámetro \"timeout\" de la URL."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+                "baseScore": 9.0,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "SINGLE",
+                "confidentialityImpact": "COMPLETE",
+                "integrityImpact": "COMPLETE",
+                "availabilityImpact": "COMPLETE"
+              },
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.0,
+              "impactScore": 10.0,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:mi:miwifi_os:2.22.15:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A05589A7-3372-49B2-ADE4-7262DEC97355"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:mi:mi_router_3:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "31C4979E-1E54-4195-B316-64D57C45B8B3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://blog.securityevaluators.com/hack-routers-get-toys-exploiting-the-mi-router-3-1d7fd42f0838",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://blog.securityevaluators.com/hack-routers-get-toys-exploiting-the-mi-router-3-1d7fd42f0838",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2018-16130",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2018-11-27T20:29:00.800",
+        "lastModified": "2024-11-21T03:52:07.477",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "System command injection in request_mitv in Xiaomi Mi Router 3 version 2.22.15 allows attackers to execute arbitrary system commands via the \"payload\" URL parameter."
+          },
+          {
+            "lang": "es",
+            "value": "Inyección de comandos del sistema en request_mitv en Xiaomi Mi Router 3 en su versión 2.22.15 permite que los atacantes ejecuten comandos arbitrarios del sistema mediante el parámetro \"payload\" de la URL."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+                "baseScore": 9.0,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "SINGLE",
+                "confidentialityImpact": "COMPLETE",
+                "integrityImpact": "COMPLETE",
+                "availabilityImpact": "COMPLETE"
+              },
+              "baseSeverity": "HIGH",
+              "exploitabilityScore": 8.0,
+              "impactScore": 10.0,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-78"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:mi:miwifi_os:2.22.15:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A05589A7-3372-49B2-ADE4-7262DEC97355"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:mi:mi_router_3:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "31C4979E-1E54-4195-B316-64D57C45B8B3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://blog.securityevaluators.com/hack-routers-get-toys-exploiting-the-mi-router-3-1d7fd42f0838",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://blog.securityevaluators.com/hack-routers-get-toys-exploiting-the-mi-router-3-1d7fd42f0838",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2018-19939",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2018-12-07T09:29:00.353",
+        "lastModified": "2024-11-21T03:58:51.013",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "The Goodix GT9xx touchscreen driver for custom Linux kernels on Xiaomi daisy-o-oss and daisy-p-oss as used in Mi A2 Lite and RedMi6 pro devices through 2018-08-27 has a NULL pointer dereference in kfree after a kmalloc failure in gtp_read_Color in drivers/input/touchscreen/gt917d/gt9xx.c."
+          },
+          {
+            "lang": "es",
+            "value": "El controlador de pantalla táctil Goodix GT9xx para Linux Kernels personalizados en Xiaomi daisy-o-oss y daisy-p-oss, tal como se usa en los dispositivos Mi A2 Lite y RedMi6 pro hasta 27/08/2018, tiene una diferencia de puntero NULL en kfree después de una falla de kmalloc en gtp_read_Color en drivers / input / touchscreen / gt917d / gt9xx.c."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 7.5,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                "baseScore": 5.0,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "PARTIAL"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-476"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:mi:mi_a2_lite_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndIncluding": "2018-08-27",
+                    "matchCriteriaId": "E210B0C2-2E73-4432-BE7E-538A15A91AA7"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:mi:mi_a2_lite:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8F994DA0-1D4B-4DE5-BF56-716C0420380F"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:mi:redmi_6_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndIncluding": "2018-08-27",
+                    "matchCriteriaId": "A64470D7-FCCF-4AC9-8B63-0089295A0D86"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:mi:redmi_6:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8693971A-0952-486D-B4A7-31F28F8D2499"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource/issues/972",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Issue Tracking",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource/issues/972",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Issue Tracking",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2018-18698",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2018-12-24T17:29:00.223",
+        "lastModified": "2024-11-21T03:56:23.550",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "An issue was discovered on Xiaomi Mi A1 tissot_sprout:8.1.0/OPM1.171019.026/V9.6.4.0.ODHMIFE devices. They store cleartext Wi-Fi passwords in logcat during the process of setting up the phone as a hotspot."
+          },
+          {
+            "lang": "es",
+            "value": "Se ha descubierto un problema en dispositivos Xiaomi Mi A1 tissot_sprout:8.1.0/OPM1.171019.026/V9.6.4.0.ODHMIFE. Almacenan contraseñas de wifi en texto claro en logcat durante el proceso de configuración del teléfono como hotspot."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                "baseScore": 9.8,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 3.9,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+                "baseScore": 5.0,
+                "accessVector": "NETWORK",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 10.0,
+              "impactScore": 2.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-522"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:mi:xiaomi_mi-a1_firmware:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2430A61E-D630-427D-958F-C2664A58FFFD"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:mi:xiaomi_mi-a1:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "ADCD866D-D5C8-4401-8404-6B4874CD8CB9"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/0x5h1v4m/CVE-ID-s/blob/master/CVE-2018-18698/MI%20A1.txt",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/0x5h1v4m/CVE-ID-s/blob/master/CVE-2018-18698/MI%20A1.txt",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2019-8413",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2019-02-17T19:29:00.317",
+        "lastModified": "2024-11-21T04:49:51.760",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "On Xiaomi MIX 2 devices with the 4.4.78 kernel, a NULL pointer dereference in the ioctl interface of the device file /dev/elliptic1 or /dev/elliptic0 causes a system crash via IOCTL 0x4008c575 (aka decimal 1074316661)."
+          },
+          {
+            "lang": "es",
+            "value": "En los dispositivos Xiaomi MIX 2 con kernel en versiones 4.4.78, una desreferencia de puntero NULL en la interfaz ioctl del archivo de dispositivo /dev/elliptic1 o /dev/elliptic0 provoca un cierre inesperado del sistema mediante la llamada IOCTL 0x4008c575 (también conocida como el decimal 1074316661)."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV30": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.0",
+                "vectorString": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+                "baseScore": 5.5,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "LOCAL",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 1.8,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+                "baseScore": 4.9,
+                "accessVector": "LOCAL",
+                "accessComplexity": "LOW",
+                "authentication": "NONE",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "COMPLETE"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 3.9,
+              "impactScore": 6.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": false
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-476"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:mi:mi_mix_2_firmware:4.4.78:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "D256A7C4-EF7B-4DFD-875F-04767EBAEB53"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:mi:mi_mix_2:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "CE8E05E1-82D5-4590-9730-96FA45AA916C"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://github.com/datadancer/HIAFuzz/blob/master/MIX2_elliptic.md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://github.com/datadancer/HIAFuzz/blob/master/MIX2_elliptic.md",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

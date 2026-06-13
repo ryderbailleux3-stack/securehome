@@ -1,0 +1,1894 @@
+{
+  "resultsPerPage": 10,
+  "startIndex": 0,
+  "totalResults": 11,
+  "format": "NVD_CVE",
+  "version": "2.0",
+  "timestamp": "2026-06-12T16:16:38.247",
+  "vulnerabilities": [
+    {
+      "cve": {
+        "id": "CVE-2014-9405",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-01-06T22:15:10.937",
+        "lastModified": "2024-11-21T02:20:47.770",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A Cross-Site Scripting (XSS) vulnerability exists in the description field of an Download RSS item or Contacts in Freebox OS Web interface 3.0.2, which allows malicious users to execute arbitrary code."
+          },
+          {
+            "lang": "es",
+            "value": "Existe una vulnerabilidad de tipo Cross-Site Scripting (XSS) en el campo description de un ítem de Download RSS o Contacts en la interfaz Freebox OS Web versión 3.0.2, que permite a usuarios maliciosos ejecutar código arbitrario."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 5.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.3,
+              "impactScore": 2.7
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+                "baseScore": 3.5,
+                "accessVector": "NETWORK",
+                "accessComplexity": "MEDIUM",
+                "authentication": "SINGLE",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "NONE"
+              },
+              "baseSeverity": "LOW",
+              "exploitabilityScore": 6.8,
+              "impactScore": 2.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": true
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:free:freebox_os:3.0.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "88364F95-E44D-4980-8362-0C161DC99FA3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://packetstormsecurity.com/files/132121/FreeBox-3.0.2-Cross-Site-Request-Forgery-Cross-Site-Scripting.html",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2015/Jun/1",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/535660/100/0/threaded",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/74936",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/132121/FreeBox-3.0.2-Cross-Site-Request-Forgery-Cross-Site-Scripting.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2015/Jun/1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/archive/1/535660/100/0/threaded",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/74936",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2014-9382",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-01-13T14:15:12.593",
+        "lastModified": "2024-11-21T02:20:44.840",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Freebox OS Web interface 3.0.2 has CSRF which can allow VPN user account creation"
+          },
+          {
+            "lang": "es",
+            "value": "La interfaz Freebox OS Web versión 3.0.2, tiene una vulnerabilidad de tipo CSRF que puede permitir la creación de cuentas de usuario VPN."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+                "baseScore": 4.3,
+                "accessVector": "NETWORK",
+                "accessComplexity": "MEDIUM",
+                "authentication": "NONE",
+                "confidentialityImpact": "NONE",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "NONE"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": true
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-352"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:free:freebox_os:3.0.2:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "88364F95-E44D-4980-8362-0C161DC99FA3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "http://packetstormsecurity.com/files/132121/FreeBox-3.0.2-Cross-Site-Request-Forgery-Cross-Site-Scripting.html",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2015/Jun/1",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/74936",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://packetstormsecurity.com/files/132121/FreeBox-3.0.2-Cross-Site-Request-Forgery-Cross-Site-Scripting.html",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "http://seclists.org/fulldisclosure/2015/Jun/1",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Mailing List",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "http://www.securityfocus.com/bid/74936",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2020-24373",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-09-16T20:15:13.973",
+        "lastModified": "2024-11-21T05:14:41.583",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A CSRF vulnerability in the UPnP MediaServer implementation in Freebox Server before 4.2.3."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de tipo CSRF en la implementación de UPnP MediaServer en Freebox Server versiones anteriores a 4.2.3"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                "baseScore": 8.8,
+                "baseSeverity": "HIGH",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 5.9
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "accessVector": "NETWORK",
+                "accessComplexity": "MEDIUM",
+                "authentication": "NONE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "PARTIAL"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": true
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-352"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:free:freebox_revolution_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "4.2.3",
+                    "matchCriteriaId": "00A87E7A-C791-44A2-AF54-6E24D9D030ED"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:free:freebox_revolution:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9DBEC90B-C734-44B9-9A66-867593750140"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:free:freebox_mini_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "4.2.3",
+                    "matchCriteriaId": "037278EC-5E4C-4097-BE8E-89CD86409A8B"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:free:freebox_mini:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "59767AA8-461A-45DB-AF87-5191EE9E60BA"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:free:freebox_one_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "4.2.3",
+                    "matchCriteriaId": "8D2CB8CC-EBD1-4349-93B1-22EB10E2E38B"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:free:freebox_one:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FD691CF6-0B86-4D7D-941B-811829B9DCDE"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:free:freebox_delta_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "4.2.3",
+                    "matchCriteriaId": "CD83B4D3-3AEA-4377-A539-D984772BCEBD"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:free:freebox_delta:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8E4EFE5C-741F-43B8-A862-61ACCD34D12D"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:free:freebox_pop_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "4.2.3",
+                    "matchCriteriaId": "0A27B4CA-3A0B-4668-AAA2-1CB3BEFB71AB"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:free:freebox_pop:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F45A97B0-D83C-4786-AB2B-1444DAB22434"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://dev.freebox.fr/blog/?p=10222",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.gabriel.urdhr.fr/2020/09/23/dns-rebinding-freebox/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://dev.freebox.fr/blog/?p=10222",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.gabriel.urdhr.fr/2020/09/23/dns-rebinding-freebox/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2020-24374",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-09-16T20:15:14.050",
+        "lastModified": "2024-11-21T05:14:41.733",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A DNS rebinding vulnerability in Freebox v5 before 1.5.29."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de reenlace DNS en Freebox v5 versiones anteriores a 1.5.29"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "accessVector": "NETWORK",
+                "accessComplexity": "MEDIUM",
+                "authentication": "NONE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "PARTIAL"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": true
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:free:freebox_hd_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "1.5.29",
+                    "matchCriteriaId": "EBA2772D-C3F9-4564-B969-87B8469E031D"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:free:freebox_hd:v5:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "EFFBCF71-D6A9-4253-B6E2-6B9157DABE70"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://dev.freebox.fr/blog/?p=10222",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.gabriel.urdhr.fr/2020/09/23/dns-rebinding-freebox/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://dev.freebox.fr/blog/?p=10222",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.gabriel.urdhr.fr/2020/09/23/dns-rebinding-freebox/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2020-24376",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-09-16T20:15:14.113",
+        "lastModified": "2024-11-21T05:14:42.040",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A DNS rebinding vulnerability in the UPnP IGD implementations in Freebox v5 before 1.5.29 and Freebox Server before 4.2.3."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de reenlace de DNS en las implementaciones de UPnP IGD en Freebox v5 versiones anteriores a 1.5.29 y Freebox Server versiones anteriores a 4.2.3"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "accessVector": "NETWORK",
+                "accessComplexity": "MEDIUM",
+                "authentication": "NONE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "PARTIAL"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": true
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:free:freebox_revolution_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "4.2.3",
+                    "matchCriteriaId": "00A87E7A-C791-44A2-AF54-6E24D9D030ED"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:free:freebox_revolution:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9DBEC90B-C734-44B9-9A66-867593750140"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:free:freebox_mini_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "4.2.3",
+                    "matchCriteriaId": "037278EC-5E4C-4097-BE8E-89CD86409A8B"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:free:freebox_mini:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "59767AA8-461A-45DB-AF87-5191EE9E60BA"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:free:freebox_one_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "4.2.3",
+                    "matchCriteriaId": "8D2CB8CC-EBD1-4349-93B1-22EB10E2E38B"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:free:freebox_one:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FD691CF6-0B86-4D7D-941B-811829B9DCDE"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:free:freebox_delta_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "4.2.3",
+                    "matchCriteriaId": "CD83B4D3-3AEA-4377-A539-D984772BCEBD"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:free:freebox_delta:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8E4EFE5C-741F-43B8-A862-61ACCD34D12D"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:free:freebox_pop_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "4.2.3",
+                    "matchCriteriaId": "0A27B4CA-3A0B-4668-AAA2-1CB3BEFB71AB"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:free:freebox_pop:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F45A97B0-D83C-4786-AB2B-1444DAB22434"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://dev.freebox.fr/blog/?p=10222",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.gabriel.urdhr.fr/2020/09/23/dns-rebinding-freebox/",
+            "source": "cve@mitre.org"
+          },
+          {
+            "url": "https://dev.freebox.fr/blog/?p=10222",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.gabriel.urdhr.fr/2020/09/23/dns-rebinding-freebox/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108"
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2020-24377",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-09-16T20:15:14.193",
+        "lastModified": "2024-11-21T05:14:42.190",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A DNS rebinding vulnerability in the Freebox OS web interface in Freebox Server before 4.2.3."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de reenlace de DNS en la interfaz web del sistema operativo Freebox en Freebox Server versiones anteriores a 4.2.3"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+                "baseScore": 9.6,
+                "baseSeverity": "CRITICAL",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "HIGH",
+                "availabilityImpact": "HIGH"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 6.0
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                "baseScore": 6.8,
+                "accessVector": "NETWORK",
+                "accessComplexity": "MEDIUM",
+                "authentication": "NONE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "PARTIAL",
+                "availabilityImpact": "PARTIAL"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 6.4,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": true
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-20"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:free:freebox_revolution_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "4.2.3",
+                    "matchCriteriaId": "00A87E7A-C791-44A2-AF54-6E24D9D030ED"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:free:freebox_revolution:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "9DBEC90B-C734-44B9-9A66-867593750140"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:free:freebox_mini_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "4.2.3",
+                    "matchCriteriaId": "037278EC-5E4C-4097-BE8E-89CD86409A8B"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:free:freebox_mini:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "59767AA8-461A-45DB-AF87-5191EE9E60BA"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:free:freebox_one_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "4.2.3",
+                    "matchCriteriaId": "8D2CB8CC-EBD1-4349-93B1-22EB10E2E38B"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:free:freebox_one:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "FD691CF6-0B86-4D7D-941B-811829B9DCDE"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:free:freebox_delta_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "4.2.3",
+                    "matchCriteriaId": "CD83B4D3-3AEA-4377-A539-D984772BCEBD"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:free:freebox_delta:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "8E4EFE5C-741F-43B8-A862-61ACCD34D12D"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:free:freebox_pop_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "4.2.3",
+                    "matchCriteriaId": "0A27B4CA-3A0B-4668-AAA2-1CB3BEFB71AB"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:free:freebox_pop:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F45A97B0-D83C-4786-AB2B-1444DAB22434"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://dev.freebox.fr/blog/?p=10222",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.gabriel.urdhr.fr/2020/09/23/dns-rebinding-freebox/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://dev.freebox.fr/blog/?p=10222",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.gabriel.urdhr.fr/2020/09/23/dns-rebinding-freebox/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2020-24375",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2020-10-19T19:15:14.753",
+        "lastModified": "2024-11-21T05:14:41.883",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "A DNS rebinding vulnerability in the UPnP MediaServer implementation in Freebox Server before 4.2.3."
+          },
+          {
+            "lang": "es",
+            "value": "Una vulnerabilidad de reenlace de DNS en la implementación de UPnP MediaServer en Freebox Server versiones anteriores a  4.2.3"
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+                "baseScore": 6.5,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "HIGH",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.8,
+              "impactScore": 3.6
+            }
+          ],
+          "cvssMetricV2": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "2.0",
+                "vectorString": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+                "baseScore": 4.3,
+                "accessVector": "NETWORK",
+                "accessComplexity": "MEDIUM",
+                "authentication": "NONE",
+                "confidentialityImpact": "PARTIAL",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "baseSeverity": "MEDIUM",
+              "exploitabilityScore": 8.6,
+              "impactScore": 2.9,
+              "acInsufInfo": false,
+              "obtainAllPrivilege": false,
+              "obtainUserPrivilege": false,
+              "obtainOtherPrivilege": false,
+              "userInteractionRequired": true
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "nvd@nist.gov",
+            "type": "Primary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-290"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:free:freebox_server:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "4.2.3",
+                    "matchCriteriaId": "2A341F2D-64CB-4D2A-B2DD-7DD63EEF3706"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:free:freebox_v5_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndExcluding": "1.5.29",
+                    "matchCriteriaId": "34BDF3E7-9DC0-43B2-8409-3348B4846D21"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:free:freebox_v5:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "A11367AF-E889-4509-A44A-964BD2C16FEE"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://dev.freebox.fr/blog/?p=10222",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.gabriel.urdhr.fr/2020/09/23/dns-rebinding-freebox/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://dev.freebox.fr/blog/?p=10222",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Release Notes",
+              "Vendor Advisory"
+            ]
+          },
+          {
+            "url": "https://www.gabriel.urdhr.fr/2020/09/23/dns-rebinding-freebox/",
+            "source": "af854a3a-2127-422b-91ae-364da2661108",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-58125",
+        "sourceIdentifier": "security@checkmk.com",
+        "published": "2025-08-28T13:16:10.133",
+        "lastModified": "2025-09-23T15:56:51.177",
+        "vulnStatus": "Analyzed",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Improper Certificate Validation in Checkmk Exchange plugin Freebox v6 agent allows attackers in MitM position to intercept traffic."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "source": "security@checkmk.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:H/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 6.9,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "attackRequirements": "PRESENT",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "vulnConfidentialityImpact": "NONE",
+                "vulnIntegrityImpact": "LOW",
+                "vulnAvailabilityImpact": "NONE",
+                "subConfidentialityImpact": "HIGH",
+                "subIntegrityImpact": "NONE",
+                "subAvailabilityImpact": "NONE",
+                "exploitMaturity": "NOT_DEFINED",
+                "confidentialityRequirement": "NOT_DEFINED",
+                "integrityRequirement": "NOT_DEFINED",
+                "availabilityRequirement": "NOT_DEFINED",
+                "modifiedAttackVector": "NOT_DEFINED",
+                "modifiedAttackComplexity": "NOT_DEFINED",
+                "modifiedAttackRequirements": "NOT_DEFINED",
+                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                "modifiedUserInteraction": "NOT_DEFINED",
+                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                "Safety": "NOT_DEFINED",
+                "Automatable": "NOT_DEFINED",
+                "Recovery": "NOT_DEFINED",
+                "valueDensity": "NOT_DEFINED",
+                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                "providerUrgency": "NOT_DEFINED"
+              }
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+                "baseScore": 4.8,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "HIGH",
+                "privilegesRequired": "NONE",
+                "userInteraction": "NONE",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.2,
+              "impactScore": 2.5
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "security@checkmk.com",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-295"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:pawelko:freebox_v6_agent:-:*:*:*:*:checkmk:*:*",
+                    "matchCriteriaId": "A4376AB1-5AA7-4354-B8AA-F120681AFE59"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://exchange.checkmk.com/p/freebox-v6",
+            "source": "security@checkmk.com",
+            "tags": [
+              "Product"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2025-63292",
+        "sourceIdentifier": "cve@mitre.org",
+        "published": "2025-11-17T19:16:20.037",
+        "lastModified": "2026-02-04T20:50:13.497",
+        "vulnStatus": "Analyzed",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "Freebox v5 HD (firmware = 1.7.20), Freebox v5 Crystal (firmware = 1.7.20), Freebox v6 Révolution r1–r3 (firmware = 4.7.x), Freebox Mini 4K (firmware = 4.7.x), and Freebox One (firmware = 4.7.x) were discovered to expose subscribers' IMSI identifiers in plaintext during the initial phase of EAP-SIM authentication over the `FreeWifi_secure` network. During the EAP-Response/Identity exchange, the subscriber's full Network Access Identifier (NAI), which embeds the raw IMSI, is transmitted without encryption, tunneling, or pseudonymization. An attacker located within Wi-Fi range (~100 meters) can passively capture these frames without requiring user interaction or elevated privileges. The disclosed IMSI enables device tracking, subscriber correlation, and long-term monitoring of user presence near any broadcasting Freebox device. The vendor acknowledged the vulnerability, and the `FreeWifi_secure` service is planned for full deactivation by 1 October 2025."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV31": [
+            {
+              "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+                "baseScore": 3.5,
+                "baseSeverity": "LOW",
+                "attackVector": "ADJACENT_NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "NONE",
+                "userInteraction": "REQUIRED",
+                "scope": "UNCHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "NONE",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.1,
+              "impactScore": 1.4
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-319"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:freebox:v5_hd_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndIncluding": "1.7.20",
+                    "matchCriteriaId": "54ED083F-0871-4476-80F4-1BEE4A5CB578"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:freebox:v5_hd:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "516D3417-8A99-4656-977C-FD5176A4D5C9"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:freebox:v5_crystal_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndIncluding": "1.7.20",
+                    "matchCriteriaId": "0A5FBD32-7294-4ECB-B935-4A2435678C31"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:freebox:v5_crystal:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "758C1FD9-EC5B-46A7-B5CA-1B866F585BF3"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:freebox:v6_revolution_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndIncluding": "4.7.0",
+                    "matchCriteriaId": "B03BBFF8-85B1-4292-84FA-B807D89DD104"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:freebox:v6_revolution:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "2D3D5E82-4E3A-4CC4-AA8E-A7098108C828"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:freebox:mini_4k_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndIncluding": "4.7.0",
+                    "matchCriteriaId": "5DD0530C-C5F0-4790-92E2-2F79FDD44B90"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:freebox:mini_4k:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "1BE098EA-039B-4128-93A3-F6D5F8A9E2F1"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "operator": "AND",
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:o:freebox:one_firmware:*:*:*:*:*:*:*:*",
+                    "versionEndIncluding": "4.7.0",
+                    "matchCriteriaId": "EE242584-50C0-447D-9BF5-EAB5058DFDA7"
+                  }
+                ]
+              },
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": false,
+                    "criteria": "cpe:2.3:h:freebox:one:-:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "F76B23FD-A78C-4C9F-9712-8F1F3F8D63F4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://7h30th3r0n3.fr/the-vulnerability-that-killed-freewifi_secure/",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Broken Link"
+            ]
+          },
+          {
+            "url": "https://gist.github.com/7h30th3r0n3/1a0fadb19f1528e3d3f6bad9f680c3b0#file-cve-2025-63292-frebox-imsi-md",
+            "source": "cve@mitre.org",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "cve": {
+        "id": "CVE-2023-53919",
+        "sourceIdentifier": "disclosure@vulncheck.com",
+        "published": "2025-12-17T23:15:50.760",
+        "lastModified": "2025-12-27T17:15:43.810",
+        "vulnStatus": "Modified",
+        "cveTags": [],
+        "descriptions": [
+          {
+            "lang": "en",
+            "value": "PodcastGenerator 3.2.9 contains a stored cross-site scripting vulnerability in the Freebox content field accessible through the theme customization interface (theme_freebox.php). Malicious JavaScript payloads injected into the Freebox content execute when users visit the application's home page."
+          }
+        ],
+        "metrics": {
+          "cvssMetricV40": [
+            {
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "4.0",
+                "vectorString": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:P/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+                "baseScore": 5.1,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "attackRequirements": "NONE",
+                "privilegesRequired": "LOW",
+                "userInteraction": "PASSIVE",
+                "vulnConfidentialityImpact": "LOW",
+                "vulnIntegrityImpact": "LOW",
+                "vulnAvailabilityImpact": "NONE",
+                "subConfidentialityImpact": "LOW",
+                "subIntegrityImpact": "LOW",
+                "subAvailabilityImpact": "NONE",
+                "exploitMaturity": "NOT_DEFINED",
+                "confidentialityRequirement": "NOT_DEFINED",
+                "integrityRequirement": "NOT_DEFINED",
+                "availabilityRequirement": "NOT_DEFINED",
+                "modifiedAttackVector": "NOT_DEFINED",
+                "modifiedAttackComplexity": "NOT_DEFINED",
+                "modifiedAttackRequirements": "NOT_DEFINED",
+                "modifiedPrivilegesRequired": "NOT_DEFINED",
+                "modifiedUserInteraction": "NOT_DEFINED",
+                "modifiedVulnConfidentialityImpact": "NOT_DEFINED",
+                "modifiedVulnIntegrityImpact": "NOT_DEFINED",
+                "modifiedVulnAvailabilityImpact": "NOT_DEFINED",
+                "modifiedSubConfidentialityImpact": "NOT_DEFINED",
+                "modifiedSubIntegrityImpact": "NOT_DEFINED",
+                "modifiedSubAvailabilityImpact": "NOT_DEFINED",
+                "Safety": "NOT_DEFINED",
+                "Automatable": "NOT_DEFINED",
+                "Recovery": "NOT_DEFINED",
+                "valueDensity": "NOT_DEFINED",
+                "vulnerabilityResponseEffort": "NOT_DEFINED",
+                "providerUrgency": "NOT_DEFINED"
+              }
+            }
+          ],
+          "cvssMetricV31": [
+            {
+              "source": "disclosure@vulncheck.com",
+              "type": "Secondary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 5.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.3,
+              "impactScore": 2.7
+            },
+            {
+              "source": "nvd@nist.gov",
+              "type": "Primary",
+              "cvssData": {
+                "version": "3.1",
+                "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+                "baseScore": 5.4,
+                "baseSeverity": "MEDIUM",
+                "attackVector": "NETWORK",
+                "attackComplexity": "LOW",
+                "privilegesRequired": "LOW",
+                "userInteraction": "REQUIRED",
+                "scope": "CHANGED",
+                "confidentialityImpact": "LOW",
+                "integrityImpact": "LOW",
+                "availabilityImpact": "NONE"
+              },
+              "exploitabilityScore": 2.3,
+              "impactScore": 2.7
+            }
+          ]
+        },
+        "weaknesses": [
+          {
+            "source": "disclosure@vulncheck.com",
+            "type": "Secondary",
+            "description": [
+              {
+                "lang": "en",
+                "value": "CWE-79"
+              }
+            ]
+          }
+        ],
+        "configurations": [
+          {
+            "nodes": [
+              {
+                "operator": "OR",
+                "negate": false,
+                "cpeMatch": [
+                  {
+                    "vulnerable": true,
+                    "criteria": "cpe:2.3:a:podcastgenerator:podcast_generator:3.2.9:*:*:*:*:*:*:*",
+                    "matchCriteriaId": "C9656104-821D-4468-A1B3-2536CC9C912C"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "url": "https://podcastgenerator.net/",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Product"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/51454",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          },
+          {
+            "url": "https://www.vulncheck.com/advisories/podcastgenerator-stored-cross-site-scripting-via-freebox-content-field",
+            "source": "disclosure@vulncheck.com",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory"
+            ]
+          },
+          {
+            "url": "https://www.exploit-db.com/exploits/51454",
+            "source": "134c704f-9b21-4f2e-91b3-4a467353bcc0",
+            "tags": [
+              "Exploit",
+              "Third Party Advisory",
+              "VDB Entry"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

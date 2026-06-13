@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureHome — Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <style>
+        /* =============================================================
+           CONCEPT : CSS CUSTOM PROPERTIES (VARIABLES)
+           On définit les couleurs une seule fois, puis on les réutilise
+           partout. Si on veut changer le thème, on modifie juste ici.
+        ============================================================= */
+        :root {
+            --bg-primary: #0a0a1a;
+            --bg-secondary: #12122a;
+            --bg-card: #1a1a3e;
+            --bg-card-hover: #222250;
+            --text-primary: #e8e8f0;
+            --text-secondary: #8888aa;
+            --text-muted: #555577;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --accent-orange: #f59e0b;
+            --accent-yellow: #eab308;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-cyan: #06b6d4;
+            --border: #2a2a50;
+            --shadow: rgba(0, 0, 0, 0.4);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+
+        /* === HEADER === */
+        .header {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .logo-version {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-left: 8px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent-green);
+            animation: pulse 2s infinite;
+        }
+
+        .status-text {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* === BOUTONS === */
+        .btn {
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-green), var(--accent-cyan));
+            color: #000;
+        }
+
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3); }
+        .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+        .btn-secondary {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover { background: var(--bg-card-hover); }
+
+        /* === LAYOUT PRINCIPAL === */
+        .main { padding: 24px 32px; max-width: 1400px; margin: 0 auto; }
+
+        /* === SCORE GLOBAL === */
+        .score-hero {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .score-gauge {
+            width: 180px;
+            height: 180px;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .score-gauge canvas { width: 100% !important; height: 100% !important; }
+
+        .score-number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .score-value {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .score-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        .score-details { flex: 1; }
+
+        .score-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .score-subtitle {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .score-bars { display: flex; flex-direction: column; gap: 10px; }
+
+        .score-bar-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .score-bar-label {
+            width: 120px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .score-bar-track {
+            flex: 1;
+            height: 8px;
+            background: var(--bg-primary);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .score-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 1s ease;
+        }
+
+        .score-bar-value {
+            width: 40px;
+            font-size: 13px;
+            font-weight: 600;
+            text-align: right;
+        }
+
+        /* === STATS === */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .stat-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-icon { font-size: 24px; margin-bottom: 8px; }
+        .stat-value { font-size: 28px; font-weight: 800; }
+        .stat-label { font-size: 12px; color: var(--text-secondary); margin-top: 4px; }
+
+        /* === GRILLE APPAREILS === */
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .devices-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .device-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 20px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .device-card:hover {
+            border-color: var(--accent-cyan);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px var(--shadow);
+        }
+
+        .device-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 14px;
+        }
+
+        .device-info h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .device-info .ip {
+            font-size: 13px;
+            color: var(--accent-cyan);
+            font-family: 'Consolas', monospace;
+        }
+
+        .device-info .hostname {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .device-score {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .device-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 12px;
+        }
+
+        .tag {
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .tag-port {
+            background: rgba(6, 182, 212, 0.15);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+        }
+
+        .tag-cve-critical {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--accent-red);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .tag-cve-high {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--accent-orange);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .tag-password {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--accent-red);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+
+        .tag-safe {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--accent-green);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .device-problems {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .device-problems li {
+            list-style: none;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .device-problems li::before {
+            content: "›";
+            position: absolute;
+            left: 0;
+            color: var(--accent-orange);
+        }
+
+        /* === GRAPHIQUES === */
+        .charts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .chart-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 20px;
+        }
+
+        .chart-card h3 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        /* === LOADING === */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 10, 26, 0.9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .loading-overlay.hidden { display: none; }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid var(--border);
+            border-top-color: var(--accent-green);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        .loading-text {
+            font-size: 16px;
+            color: var(--text-secondary);
+        }
+
+        .loading-sub {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+
+        /* === EMPTY STATE === */
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .empty-state .icon { font-size: 48px; margin-bottom: 16px; }
+        .empty-state h2 { font-size: 20px; margin-bottom: 8px; }
+        .empty-state p { color: var(--text-secondary); margin-bottom: 24px; }
+
+        /* === FOOTER === */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+        }
+
+        .footer a {
+            color: var(--accent-green);
+            text-decoration: none;
+        }
+
+        /* === ANIMATIONS === */
+        @keyframes spin { to { transform: rotate(360deg); } }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .fade-in { animation: fadeIn 0.4s ease forwards; }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 900px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .charts-grid { grid-template-columns: 1fr; }
+            .score-hero { flex-direction: column; text-align: center; }
+            .main { padding: 16px; }
+            .header { padding: 12px 16px; }
+        }
+
+        @media (max-width: 600px) {
+            .devices-grid { grid-template-columns: 1fr; }
+            .header-actions .btn span { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- === HEADER === -->
+    <header class="header">
+        <div class="logo">
+            <div class="logo-icon">🏠</div>
+            <span class="logo-text">SecureHome</span>
+            <span class="logo-version">v1.0</span>
+        </div>
+        <div class="header-actions">
+            <div style="display: flex; align-items: center; gap: 6px;">
+                <div class="status-dot" id="statusDot"></div>
+                <span class="status-text" id="statusText">En ligne</span>
+            </div>
+            <button class="btn btn-secondary" onclick="lancerQuickScan()">
+                ⚡ <span>Scan rapide</span>
+            </button>
+            <button class="btn btn-primary" onclick="lancerFullScan()" id="btnFullScan">
+                🔍 <span>Scan complet</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- === LOADING OVERLAY === -->
+    <div class="loading-overlay hidden" id="loading">
+        <div class="spinner"></div>
+        <div class="loading-text" id="loadingText">Scan en cours...</div>
+        <div class="loading-sub" id="loadingSub">Découverte des appareils sur le réseau</div>
+    </div>
+
+    <!-- === CONTENU PRINCIPAL === -->
+    <main class="main" id="mainContent">
+
+        <!-- État vide (avant le premier scan) -->
+        <div class="empty-state" id="emptyState">
+            <div class="icon">🔍</div>
+            <h2>Bienvenue sur SecureHome</h2>
+            <p>Lance un scan pour analyser la sécurité de ton réseau domestique.</p>
+            <button class="btn btn-primary" onclick="lancerFullScan()" style="margin: 0 auto;">
+                🚀 Lancer le premier scan
+            </button>
+        </div>
+
+        <!-- Dashboard (après un scan) -->
+        <div id="dashboard" style="display: none;">
+
+            <!-- Score global -->
+            <div class="score-hero fade-in">
+                <div class="score-gauge">
+                    <canvas id="gaugeChart"></canvas>
+                    <div class="score-number">
+                        <div class="score-value" id="scoreValue">--</div>
+                        <div class="score-label">/ 100</div>
+                    </div>
+                </div>
+                <div class="score-details">
+                    <div class="score-title" id="scoreTitle">Score de sécurité</div>
+                    <div class="score-subtitle" id="scoreSubtitle">
+                        Dernière analyse : --
+                    </div>
+                    <div class="score-bars" id="scoreBars"></div>
+                </div>
+            </div>
+
+            <!-- Stats rapides -->
+            <div class="stats-grid fade-in" id="statsGrid">
+                <div class="stat-card">
+                    <div class="stat-icon">📱</div>
+                    <div class="stat-value" id="statAppareils">0</div>
+                    <div class="stat-label">Appareils détectés</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔌</div>
+                    <div class="stat-value" id="statPorts">0</div>
+                    <div class="stat-label">Ports ouverts</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🛡️</div>
+                    <div class="stat-value" id="statCVE">0</div>
+                    <div class="stat-label">CVE détectées</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔑</div>
+                    <div class="stat-value" id="statMDP">0</div>
+                    <div class="stat-label">MDP par défaut</div>
+                </div>
+            </div>
+
+            <!-- Graphiques -->
+            <div class="charts-grid fade-in">
+                <div class="chart-card">
+                    <h3>📊 Scores par appareil</h3>
+                    <canvas id="devicesChart" height="200"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>🛡️ Répartition des risques</h3>
+                    <canvas id="risksChart" height="200"></canvas>
+                </div>
+            </div>
+
+            <!-- Liste des appareils -->
+            <div class="section-title">📱 Appareils du réseau</div>
+            <div class="devices-grid" id="devicesGrid"></div>
+        </div>
+    </main>
+
+    <!-- === FOOTER === -->
+    <footer class="footer">
+        SecureHome v1.0 — Projet éducatif de cybersécurité
+        — Usage exclusif sur réseau domestique
+        — <a href="https://github.com/ryderbailleux3-stack" target="_blank">GitHub</a>
+    </footer>
+
+    <!-- =============================================================
+         JAVASCRIPT — LOGIQUE DU DASHBOARD
+    ============================================================= -->
+    <script>
+        // Variables globales pour les graphiques Chart.js
+        let gaugeChart = null;
+        let devicesChart = null;
+        let risksChart = null;
+
+        // =========================================================
+        // FONCTIONS UTILITAIRES
+        // =========================================================
+
+        function getScoreColor(score) {
+            if (score >= 80) return '#10b981';
+            if (score >= 60) return '#eab308';
+            if (score >= 40) return '#f59e0b';
+            return '#ef4444';
+        }
+
+        function getScoreNote(score) {
+            if (score >= 90) return 'A+';
+            if (score >= 80) return 'A';
+            if (score >= 70) return 'B';
+            if (score >= 60) return 'C';
+            if (score >= 50) return 'C-';
+            if (score >= 40) return 'D';
+            if (score >= 30) return 'D-';
+            if (score >= 20) return 'E';
+            return 'F';
+        }
+
+        function getScoreDescription(score) {
+            if (score >= 90) return 'Excellent — réseau bien sécurisé';
+            if (score >= 80) return 'Très bon — quelques améliorations possibles';
+            if (score >= 70) return 'Bon — des points à surveiller';
+            if (score >= 60) return 'Moyen — actions recommandées';
+            if (score >= 40) return 'Faible — actions nécessaires';
+            return 'Critique — actions urgentes requises';
+        }
+
+        function showLoading(texte, sous_texte) {
+            document.getElementById('loading').classList.remove('hidden');
+            document.getElementById('loadingText').textContent = texte || 'Scan en cours...';
+            document.getElementById('loadingSub').textContent = sous_texte || '';
+        }
+
+        function hideLoading() {
+            document.getElementById('loading').classList.add('hidden');
+        }
+
+        // =========================================================
+        // SCAN RAPIDE
+        // =========================================================
+
+        async function lancerQuickScan() {
+            showLoading('Scan rapide...', 'Découverte des appareils (~10 secondes)');
+            try {
+                const resp = await fetch('/api/quick-scan');
+                const data = await resp.json();
+                if (data.erreur) {
+                    alert('Erreur : ' + data.erreur);
+                } else {
+                    alert(`Scan rapide terminé !\n${data.nombre_appareils} appareils détectés`);
+                }
+            } catch (e) {
+                alert('Erreur de connexion au serveur');
+            }
+            hideLoading();
+        }
+
+        // =========================================================
+        // SCAN COMPLET
+        // =========================================================
+
+        async function lancerFullScan() {
+            const btn = document.getElementById('btnFullScan');
+            btn.disabled = true;
+
+            showLoading(
+                'Scan complet en cours...',
+                'Réseau → Ports → Mots de passe → CVE (~2-3 minutes)'
+            );
+
+            // Mise à jour du texte de chargement
+            const etapes = [
+                { t: 10, texte: 'Découverte des appareils...' },
+                { t: 20, texte: 'Scan des ports ouverts...' },
+                { t: 40, texte: 'Test des mots de passe...' },
+                { t: 60, texte: 'Recherche de CVE (API NIST)...' },
+                { t: 90, texte: 'Calcul des scores...' },
+            ];
+
+            let etapeIndex = 0;
+            const timer = setInterval(() => {
+                if (etapeIndex < etapes.length) {
+                    document.getElementById('loadingSub').textContent = etapes[etapeIndex].texte;
+                    etapeIndex++;
+                }
+            }, 15000);
+
+            try {
+                const resp = await fetch('/api/full-scan');
+                const data = await resp.json();
+                clearInterval(timer);
+
+                if (data.erreur) {
+                    alert('Erreur : ' + data.erreur);
+                } else {
+                    afficherDashboard(data);
+                }
+            } catch (e) {
+                clearInterval(timer);
+                alert('Erreur de connexion au serveur');
+            }
+
+            hideLoading();
+            btn.disabled = false;
+        }
+
+        // =========================================================
+        // CHARGER LE DERNIER SCAN
+        // =========================================================
+
+        async function chargerDernierScan() {
+            try {
+                const resp = await fetch('/api/last-scan');
+                if (resp.ok) {
+                    const data = await resp.json();
+                    if (!data.erreur) {
+                        afficherDashboard(data);
+                    }
+                }
+            } catch (e) {
+                // Pas de scan précédent, on affiche l'état vide
+            }
+        }
+
+        // =========================================================
+        // AFFICHAGE DU DASHBOARD
+        // =========================================================
+
+        function afficherDashboard(data) {
+            document.getElementById('emptyState').style.display = 'none';
+            document.getElementById('dashboard').style.display = 'block';
+
+            const score = data.score_reseau || data.score_global || 0;
+            const appareils = data.appareils || [];
+
+            // --- Score global ---
+            const scoreColor = getScoreColor(score);
+            const scoreEl = document.getElementById('scoreValue');
+            scoreEl.textContent = score;
+            scoreEl.style.color = scoreColor;
+
+            document.getElementById('scoreTitle').textContent =
+                `Score : ${score}/100 (${getScoreNote(score)})`;
+            document.getElementById('scoreSubtitle').textContent =
+                `${getScoreDescription(score)} — ${data.date || 'maintenant'}`;
+
+            // --- Jauge (Doughnut Chart) ---
+            if (gaugeChart) gaugeChart.destroy();
+            gaugeChart = new Chart(document.getElementById('gaugeChart'), {
+                type: 'doughnut',
+                data: {
+                    datasets: [{
+                        data: [score, 100 - score],
+                        backgroundColor: [scoreColor, 'rgba(42, 42, 80, 0.5)'],
+                        borderWidth: 0,
+                        cutout: '78%',
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    rotation: -90,
+                    circumference: 180,
+                    plugins: { legend: { display: false }, tooltip: { enabled: false } },
+                    animation: { animateRotate: true, duration: 1500 },
+                }
+            });
+
+            // --- Stats ---
+            document.getElementById('statAppareils').textContent = appareils.length;
+
+            let totalPorts = 0, totalCVE = 0, totalMDP = 0;
+            appareils.forEach(a => {
+                totalPorts += (a.ports_ouverts || []).length;
+                totalCVE += (a.cves || []).length;
+                if (a.mdp_defaut) totalMDP++;
+            });
+
+            document.getElementById('statPorts').textContent = totalPorts;
+            document.getElementById('statCVE').textContent = totalCVE;
+            document.getElementById('statMDP').textContent = totalMDP;
+
+            // Colorer la stat MDP en rouge si > 0
+            const mdpEl = document.getElementById('statMDP');
+            mdpEl.style.color = totalMDP > 0 ? '#ef4444' : '#10b981';
+
+            // --- Barres de score par critère ---
+            afficherBarresScore(appareils);
+
+            // --- Graphique scores par appareil ---
+            afficherChartAppareils(appareils);
+
+            // --- Graphique répartition des risques ---
+            afficherChartRisques(appareils);
+
+            // --- Cartes appareils ---
+            afficherAppareils(appareils);
+        }
+
+        function afficherBarresScore(appareils) {
+            const container = document.getElementById('scoreBars');
+            container.innerHTML = '';
+
+            // Calcul des moyennes par critère
+            let criteres = {
+                'Mots de passe': { total: 0, max: 35, color: '#ef4444' },
+                'CVE': { total: 0, max: 30, color: '#f59e0b' },
+                'Ports': { total: 0, max: 20, color: '#3b82f6' },
+                'Chiffrement': { total: 0, max: 15, color: '#8b5cf6' },
+            };
+
+            if (appareils.length > 0) {
+                appareils.forEach(a => {
+                    const sd = a.scores_detail;
+                    if (sd) {
+                        criteres['Mots de passe'].total += sd.mots_de_passe || 0;
+                        criteres['CVE'].total += sd.cve || 0;
+                        criteres['Ports'].total += sd.ports || 0;
+                        criteres['Chiffrement'].total += sd.chiffrement || 0;
+                    }
+                });
+
+                Object.keys(criteres).forEach(k => {
+                    criteres[k].avg = Math.round(criteres[k].total / appareils.length);
+                });
+            }
+
+            Object.entries(criteres).forEach(([nom, c]) => {
+                const pct = c.max > 0 ? ((c.avg || 0) / c.max * 100) : 0;
+                container.innerHTML += `
+                    <div class="score-bar-row">
+                        <div class="score-bar-label">${nom}</div>
+                        <div class="score-bar-track">
+                            <div class="score-bar-fill" style="width:${pct}%; background:${c.color}"></div>
+                        </div>
+                        <div class="score-bar-value" style="color:${c.color}">${c.avg || 0}/${c.max}</div>
+                    </div>
+                `;
+            });
+        }
+
+        function afficherChartAppareils(appareils) {
+            if (devicesChart) devicesChart.destroy();
+
+            const labels = appareils.map(a => a.fabricant.substring(0, 15));
+            const scores = appareils.map(a => a.score || 0);
+            const colors = scores.map(s => getScoreColor(s));
+
+            devicesChart = new Chart(document.getElementById('devicesChart'), {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Score',
+                        data: scores,
+                        backgroundColor: colors.map(c => c + '40'),
+                        borderColor: colors,
+                        borderWidth: 2,
+                        borderRadius: 6,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true, max: 100,
+                            ticks: { color: '#888' },
+                            grid: { color: 'rgba(42,42,80,0.5)' },
+                        },
+                        x: {
+                            ticks: { color: '#888', maxRotation: 45 },
+                            grid: { display: false },
+                        }
+                    },
+                    plugins: {
+                        legend: { display: false },
+                    }
+                }
+            });
+        }
+
+        function afficherChartRisques(appareils) {
+            if (risksChart) risksChart.destroy();
+
+            let critiques = 0, eleves = 0, moyens = 0, faibles = 0, safe = 0;
+
+            appareils.forEach(a => {
+                (a.cves || []).forEach(c => {
+                    if (c.severite === 'CRITIQUE') critiques++;
+                    else if (c.severite === 'ÉLEVÉ') eleves++;
+                    else if (c.severite === 'MOYEN') moyens++;
+                    else faibles++;
+                });
+                if (!a.cves || a.cves.length === 0) safe++;
+            });
+
+            risksChart = new Chart(document.getElementById('risksChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Critique', 'Élevé', 'Moyen', 'Faible', 'Sain'],
+                    datasets: [{
+                        data: [critiques, eleves, moyens, faibles, safe],
+                        backgroundColor: [
+                            '#ef4444', '#f59e0b', '#eab308', '#10b981', '#3b82f6'
+                        ],
+                        borderWidth: 0,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: { color: '#888', padding: 12, font: { size: 12 } },
+                        }
+                    }
+                }
+            });
+        }
+
+        function afficherAppareils(appareils) {
+            const grid = document.getElementById('devicesGrid');
+            grid.innerHTML = '';
+
+            // Trie par score croissant (les pires en premier)
+            const tries = [...appareils].sort((a, b) => (a.score || 0) - (b.score || 0));
+
+            tries.forEach(appareil => {
+                const score = appareil.score || 0;
+                const color = getScoreColor(score);
+                const note = getScoreNote(score);
+
+                let tagsHTML = '';
+
+                // Tags ports
+                (appareil.ports_ouverts || []).forEach(p => {
+                    tagsHTML += `<span class="tag tag-port">Port ${p}</span>`;
+                });
+
+                // Tag MDP
+                if (appareil.mdp_defaut) {
+                    tagsHTML += `<span class="tag tag-password">🔑 MDP par défaut</span>`;
+                }
+
+                // Tags CVE
+                const nbCritiques = (appareil.cves || []).filter(c => c.severite === 'CRITIQUE').length;
+                const nbEleves = (appareil.cves || []).filter(c => c.severite === 'ÉLEVÉ').length;
+
+                if (nbCritiques > 0) {
+                    tagsHTML += `<span class="tag tag-cve-critical">🔴 ${nbCritiques} CVE critique(s)</span>`;
+                }
+                if (nbEleves > 0) {
+                    tagsHTML += `<span class="tag tag-cve-high">🟠 ${nbEleves} CVE élevée(s)</span>`;
+                }
+
+                if (!tagsHTML) {
+                    tagsHTML = '<span class="tag tag-safe">✅ Aucun problème détecté</span>';
+                }
+
+                // Problèmes
+                let problemesHTML = '';
+                (appareil.problemes || []).forEach(p => {
+                    problemesHTML += `<li>${p}</li>`;
+                });
+
+                const card = document.createElement('div');
+                card.className = 'device-card fade-in';
+                card.innerHTML = `
+                    <div class="device-header">
+                        <div class="device-info">
+                            <h3>${appareil.fabricant}</h3>
+                            <div class="ip">${appareil.ip}</div>
+                            <div class="hostname">${appareil.hostname || ''}</div>
+                        </div>
+                        <div class="device-score" style="background:${color}20; color:${color}; border:2px solid ${color}40">
+                            ${score}
+                        </div>
+                    </div>
+                    <div class="device-tags">${tagsHTML}</div>
+                    ${problemesHTML ? `<ul class="device-problems">${problemesHTML}</ul>` : ''}
+                `;
+
+                grid.appendChild(card);
+            });
+        }
+
+        // =========================================================
+        // INITIALISATION
+        // =========================================================
+
+        // Au chargement, essaie de charger le dernier scan
+        window.addEventListener('DOMContentLoaded', () => {
+            chargerDernierScan();
+        });
+    </script>
+
+</body>
+</html>

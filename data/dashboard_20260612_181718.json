@@ -1,0 +1,518 @@
+{
+  "statut": "ok",
+  "date": "2026-06-12 18:17:18",
+  "reseau": "192.168.0.0/24",
+  "score_reseau": 44,
+  "nombre_appareils": 13,
+  "appareils": [
+    {
+      "ip": "192.168.0.12",
+      "mac": "9A:CC:5B:47:A9:5C",
+      "fabricant": "Inconnu",
+      "hostname": "s25-de-nola.home",
+      "ports_ouverts": [],
+      "services": {},
+      "mdp_defaut": false,
+      "cves": [],
+      "score": 100,
+      "problemes": []
+    },
+    {
+      "ip": "192.168.0.14",
+      "mac": "50:26:EF:A1:65:62",
+      "fabricant": "Murata Manufacturing",
+      "hostname": "daikinap63937.home",
+      "ports_ouverts": [
+        80
+      ],
+      "services": {
+        "80": {
+          "nom": "http",
+          "produit": "",
+          "version": "",
+          "risque": "MOYEN",
+          "description": "HTTP"
+        }
+      },
+      "mdp_defaut": true,
+      "cves": [],
+      "score": 65,
+      "problemes": [
+        "Mot de passe par défaut : admin/admin",
+        "Credential par défaut"
+      ]
+    },
+    {
+      "ip": "192.168.0.17",
+      "mac": "D4:5E:EC:6F:D5:A4",
+      "fabricant": "Beijing Xiaomi Electronics",
+      "hostname": "android12.home",
+      "ports_ouverts": [],
+      "services": {},
+      "mdp_defaut": false,
+      "cves": [
+        {
+          "id": "CVE-2018-14010",
+          "score": 9.8,
+          "severite": "CRITIQUE",
+          "description": "OS command injection in the guest Wi-Fi settings feature in /cgi-bin/luci on Xiaomi R3P before 2.14.5, R3C before 2.12.15, R3 before 2.22.15, and R3D ",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2018-14010"
+        },
+        {
+          "id": "CVE-2018-14060",
+          "score": 9.8,
+          "severite": "CRITIQUE",
+          "description": "OS command injection in the AP mode settings feature in /cgi-bin/luci /api/misystem/set_router_wifiap on Xiaomi R3D before 2.26.4 devices allows an at",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2018-14060"
+        },
+        {
+          "id": "CVE-2018-18698",
+          "score": 9.8,
+          "severite": "CRITIQUE",
+          "description": "An issue was discovered on Xiaomi Mi A1 tissot_sprout:8.1.0/OPM1.171019.026/V9.6.4.0.ODHMIFE devices. They store cleartext Wi-Fi passwords in logcat d",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2018-18698"
+        },
+        {
+          "id": "CVE-2018-13023",
+          "score": 8.8,
+          "severite": "ÉLEVÉ",
+          "description": "System command injection vulnerability in wifi_access in Xiaomi Mi Router 3 version 2.22.15 allows attackers to execute system commands via the \"timeo",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2018-13023"
+        },
+        {
+          "id": "CVE-2018-16130",
+          "score": 8.8,
+          "severite": "ÉLEVÉ",
+          "description": "System command injection in request_mitv in Xiaomi Mi Router 3 version 2.22.15 allows attackers to execute arbitrary system commands via the \"payload\"",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2018-16130"
+        }
+      ],
+      "score": 39,
+      "problemes": [
+        "3 CVE critique(s)",
+        "2 CVE élevée(s)"
+      ]
+    },
+    {
+      "ip": "192.168.0.18",
+      "mac": "F6:8F:66:1F:ED:0B",
+      "fabricant": "Inconnu",
+      "hostname": "pixel-8-hugo.home",
+      "ports_ouverts": [],
+      "services": {},
+      "mdp_defaut": false,
+      "cves": [],
+      "score": 100,
+      "problemes": []
+    },
+    {
+      "ip": "192.168.0.28",
+      "mac": "50:26:EF:9A:E9:14",
+      "fabricant": "Murata Manufacturing",
+      "hostname": "daikinap63785.home",
+      "ports_ouverts": [
+        80
+      ],
+      "services": {
+        "80": {
+          "nom": "http",
+          "produit": "",
+          "version": "",
+          "risque": "MOYEN",
+          "description": "HTTP"
+        }
+      },
+      "mdp_defaut": true,
+      "cves": [],
+      "score": 65,
+      "problemes": [
+        "Mot de passe par défaut : admin/admin",
+        "Credential par défaut"
+      ]
+    },
+    {
+      "ip": "192.168.0.29",
+      "mac": "70:89:76:15:3F:26",
+      "fabricant": "Tuya Smart",
+      "hostname": "Inconnu",
+      "ports_ouverts": [],
+      "services": {},
+      "mdp_defaut": false,
+      "cves": [
+        {
+          "id": "CVE-2025-56557",
+          "score": 9.1,
+          "severite": "CRITIQUE",
+          "description": "An issue discovered in the Tuya Smart Life App 5.6.1 allows attackers to unprivileged control Matter devices via the Matter protocol.",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2025-56557"
+        },
+        {
+          "id": "CVE-2025-56400",
+          "score": 8.8,
+          "severite": "ÉLEVÉ",
+          "description": "Cross-Site Request Forgery (CSRF) vulnerability in the OAuth implementation of the Tuya SDK 6.5.0 for Android and iOS, affects the Tuya Smart and Smar",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2025-56400"
+        },
+        {
+          "id": "CVE-2025-25680",
+          "score": 7.7,
+          "severite": "ÉLEVÉ",
+          "description": "LSC Smart Connect LSC Indoor PTZ Camera 7.6.32 is contains a RCE vulnerability in the tuya_ipc_direct_connect function of the anyka_ipc process. The v",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2025-25680"
+        },
+        {
+          "id": "CVE-2025-63296",
+          "score": 6.5,
+          "severite": "MOYEN",
+          "description": "KERUI K259 5MP Wi-Fi / Tuya Smart Security Camera firmware v33.53.87 contains a code execution vulnerability in its boot/update logic: during startup ",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2025-63296"
+        },
+        {
+          "id": "CVE-2024-32268",
+          "score": 3.3,
+          "severite": "FAIBLE",
+          "description": "An issue in Tuya Smart camera U6N v.3.2.5 allows a remote attacker to cause a denial of service via a crafted packet to the network connection compone",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2024-32268"
+        }
+      ],
+      "score": 69,
+      "problemes": [
+        "1 CVE critique(s)",
+        "2 CVE élevée(s)"
+      ]
+    },
+    {
+      "ip": "192.168.0.32",
+      "mac": "A8:31:62:34:68:B6",
+      "fabricant": "Hangzhou Huacheng Network Technology",
+      "hostname": "nomi-ipc-k2ec-5h2w-7d85.home",
+      "ports_ouverts": [
+        80,
+        554
+      ],
+      "services": {
+        "80": {
+          "nom": "http",
+          "produit": "",
+          "version": "",
+          "risque": "MOYEN",
+          "description": "HTTP"
+        },
+        "554": {
+          "nom": "rtsp",
+          "produit": "",
+          "version": "",
+          "risque": "MOYEN",
+          "description": "RTSP"
+        }
+      },
+      "mdp_defaut": false,
+      "cves": [],
+      "score": 100,
+      "problemes": []
+    },
+    {
+      "ip": "192.168.0.43",
+      "mac": "94:58:CB:AF:7E:78",
+      "fabricant": "Nintendo",
+      "hostname": "Inconnu",
+      "ports_ouverts": [],
+      "services": {},
+      "mdp_defaut": false,
+      "cves": [
+        {
+          "id": "CVE-2020-13109",
+          "score": 9.8,
+          "severite": "CRITIQUE",
+          "description": "Morita Shogi 64 through 2020-05-02 for Nintendo 64 devices allows remote attackers to execute arbitrary code via crafted packet data to the built-in m",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2020-13109"
+        },
+        {
+          "id": "CVE-2022-47949",
+          "score": 9.8,
+          "severite": "CRITIQUE",
+          "description": "The Nintendo NetworkBuffer class, as used in Animal Crossing: New Horizons before 2.0.6 and other products, allows remote attackers to execute arbitra",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2022-47949"
+        },
+        {
+          "id": "CVE-2023-35856",
+          "score": 9.8,
+          "severite": "CRITIQUE",
+          "description": "A buffer overflow in Nintendo Mario Kart Wii RMCP01, RMCE01, RMCJ01, and RMCK01 can be exploited by a game client to execute arbitrary code on a clien",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2023-35856"
+        },
+        {
+          "id": "CVE-2024-34454",
+          "score": 7.4,
+          "severite": "ÉLEVÉ",
+          "description": "Nintendo Wii U OS 5.5.5 allows man-in-the-middle attackers to forge SSL certificates as though they came from a Root CA, because there is a secondary ",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2024-34454"
+        },
+        {
+          "id": "CVE-2022-36293",
+          "score": 7.2,
+          "severite": "ÉLEVÉ",
+          "description": "Buffer overflow vulnerability in Nintendo Wi-Fi Network Adaptor WAP-001 All versions allows an attacker with an administrative privilege to execute ar",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2022-36293"
+        }
+      ],
+      "score": 39,
+      "problemes": [
+        "3 CVE critique(s)",
+        "2 CVE élevée(s)"
+      ]
+    },
+    {
+      "ip": "192.168.0.44",
+      "mac": "A8:31:62:34:61:AA",
+      "fabricant": "Hangzhou Huacheng Network Technology",
+      "hostname": "nomi-ipc-k2ec-5h2w-b76f.home",
+      "ports_ouverts": [
+        80,
+        554
+      ],
+      "services": {
+        "80": {
+          "nom": "http",
+          "produit": "",
+          "version": "",
+          "risque": "MOYEN",
+          "description": "HTTP"
+        },
+        "554": {
+          "nom": "rtsp",
+          "produit": "",
+          "version": "",
+          "risque": "MOYEN",
+          "description": "RTSP"
+        }
+      },
+      "mdp_defaut": false,
+      "cves": [],
+      "score": 100,
+      "problemes": []
+    },
+    {
+      "ip": "192.168.0.45",
+      "mac": "34:27:92:84:08:49",
+      "fabricant": "Freebox SAS",
+      "hostname": "freebox-player2.home",
+      "ports_ouverts": [
+        80,
+        554,
+        5000,
+        8080
+      ],
+      "services": {
+        "80": {
+          "nom": "http",
+          "produit": "",
+          "version": "",
+          "risque": "MOYEN",
+          "description": "HTTP"
+        },
+        "554": {
+          "nom": "rtsp",
+          "produit": "",
+          "version": "",
+          "risque": "MOYEN",
+          "description": "RTSP"
+        },
+        "5000": {
+          "nom": "upnp",
+          "produit": "",
+          "version": "",
+          "risque": "INFO",
+          "description": "Synology"
+        },
+        "8080": {
+          "nom": "http-proxy",
+          "produit": "",
+          "version": "",
+          "risque": "MOYEN",
+          "description": "HTTP-alt"
+        }
+      },
+      "mdp_defaut": false,
+      "cves": [
+        {
+          "id": "CVE-2020-24374",
+          "score": 9.6,
+          "severite": "CRITIQUE",
+          "description": "A DNS rebinding vulnerability in Freebox v5 before 1.5.29.",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2020-24374"
+        },
+        {
+          "id": "CVE-2020-24376",
+          "score": 9.6,
+          "severite": "CRITIQUE",
+          "description": "A DNS rebinding vulnerability in the UPnP IGD implementations in Freebox v5 before 1.5.29 and Freebox Server before 4.2.3.",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2020-24376"
+        },
+        {
+          "id": "CVE-2020-24377",
+          "score": 9.6,
+          "severite": "CRITIQUE",
+          "description": "A DNS rebinding vulnerability in the Freebox OS web interface in Freebox Server before 4.2.3.",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2020-24377"
+        },
+        {
+          "id": "CVE-2020-24373",
+          "score": 8.8,
+          "severite": "ÉLEVÉ",
+          "description": "A CSRF vulnerability in the UPnP MediaServer implementation in Freebox Server before 4.2.3.",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2020-24373"
+        },
+        {
+          "id": "CVE-2026-41135",
+          "score": 7.5,
+          "severite": "ÉLEVÉ",
+          "description": "free5GC UDR is the Policy Control Function (PCF) for free5GC, an an open-source project for 5th generation (5G) mobile core networks. A memory leak vu",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-41135"
+        }
+      ],
+      "score": 39,
+      "problemes": [
+        "3 CVE critique(s)",
+        "2 CVE élevée(s)"
+      ]
+    },
+    {
+      "ip": "192.168.0.49",
+      "mac": "A6:08:94:B5:FC:33",
+      "fabricant": "Inconnu",
+      "hostname": "s26-de-jeremy1.home",
+      "ports_ouverts": [],
+      "services": {},
+      "mdp_defaut": false,
+      "cves": [],
+      "score": 100,
+      "problemes": []
+    },
+    {
+      "ip": "192.168.0.50",
+      "mac": "BC:2A:33:23:75:4A",
+      "fabricant": "Quectel Wireless Solutions",
+      "hostname": "Inconnu",
+      "ports_ouverts": [
+        53,
+        8883
+      ],
+      "services": {
+        "53": {
+          "nom": "domain",
+          "produit": "",
+          "version": "",
+          "risque": "FAIBLE",
+          "description": "DNS"
+        },
+        "8883": {
+          "nom": "secure-mqtt",
+          "produit": "",
+          "version": "",
+          "risque": "INFO",
+          "description": "MQTT-TLS"
+        }
+      },
+      "mdp_defaut": false,
+      "cves": [],
+      "score": 100,
+      "problemes": []
+    },
+    {
+      "ip": "192.168.0.254",
+      "mac": "34:27:92:62:E7:16",
+      "fabricant": "Freebox SAS",
+      "hostname": "Inconnu",
+      "ports_ouverts": [
+        53,
+        80,
+        443,
+        445,
+        554
+      ],
+      "services": {
+        "53": {
+          "nom": "domain",
+          "produit": "",
+          "version": "",
+          "risque": "FAIBLE",
+          "description": "DNS"
+        },
+        "80": {
+          "nom": "http",
+          "produit": "",
+          "version": "",
+          "risque": "MOYEN",
+          "description": "HTTP"
+        },
+        "443": {
+          "nom": "https",
+          "produit": "",
+          "version": "",
+          "risque": "FAIBLE",
+          "description": "HTTPS"
+        },
+        "445": {
+          "nom": "microsoft-ds",
+          "produit": "",
+          "version": "",
+          "risque": "ÉLEVÉ",
+          "description": "SMB"
+        },
+        "554": {
+          "nom": "rtsp",
+          "produit": "",
+          "version": "",
+          "risque": "MOYEN",
+          "description": "RTSP"
+        }
+      },
+      "mdp_defaut": true,
+      "cves": [
+        {
+          "id": "CVE-2020-24374",
+          "score": 9.6,
+          "severite": "CRITIQUE",
+          "description": "A DNS rebinding vulnerability in Freebox v5 before 1.5.29.",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2020-24374"
+        },
+        {
+          "id": "CVE-2020-24376",
+          "score": 9.6,
+          "severite": "CRITIQUE",
+          "description": "A DNS rebinding vulnerability in the UPnP IGD implementations in Freebox v5 before 1.5.29 and Freebox Server before 4.2.3.",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2020-24376"
+        },
+        {
+          "id": "CVE-2020-24377",
+          "score": 9.6,
+          "severite": "CRITIQUE",
+          "description": "A DNS rebinding vulnerability in the Freebox OS web interface in Freebox Server before 4.2.3.",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2020-24377"
+        },
+        {
+          "id": "CVE-2020-24373",
+          "score": 8.8,
+          "severite": "ÉLEVÉ",
+          "description": "A CSRF vulnerability in the UPnP MediaServer implementation in Freebox Server before 4.2.3.",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2020-24373"
+        },
+        {
+          "id": "CVE-2026-41135",
+          "score": 7.5,
+          "severite": "ÉLEVÉ",
+          "description": "free5GC UDR is the Policy Control Function (PCF) for free5GC, an an open-source project for 5th generation (5G) mobile core networks. A memory leak vu",
+          "lien": "https://nvd.nist.gov/vuln/detail/CVE-2026-41135"
+        }
+      ],
+      "score": 4,
+      "problemes": [
+        "Mot de passe par défaut : admin/admin",
+        "Credential par défaut",
+        "3 CVE critique(s)",
+        "2 CVE élevée(s)"
+      ]
+    }
+  ]
+}
